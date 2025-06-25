@@ -47,5 +47,5 @@ attacheventListener()*/
  it forms closure even when the call stack is empty we are not executing any of the code 
  but still the program not freeing up memmory it cant just free up the count becuse we never know*/
 
-
+ 
 /*  */
