@@ -268,11 +268,47 @@ function changeBG(){
 }*/  //--------------to avoid this repetaion using class
 
 
-/*  */
+/* CLASS */
+// class Employee{
+//   constructor(name,position,salary){
+//     this.name=name
+//     this.position=position
+//     this.salary=salary
+//   }
+//   getSalary(){
+//     document.write("Salary of"+this.name+" is "+this.salary)
+//   }
+// }
+// let e1=new Employee("John","Accountant",30000)
+// // e1.getSalary()
+
+// let e2=new Employee("Anil","Supervisor",4000)
+// document.write(e2.name)
+// e2.getSalary()
+
+/* INHERITANCE */
 
 class Employee{
-  constructor(){
-    
+  constructor(name,position,salary){
+    this.name=name
+    this.position=position
+    this.salary=salary
+  }
+  getSalary(){
+    document.write("Salary of"+this.name+" is "+this.salary)
   }
 }
+class Manager extends Employee{
 
+}
+class Supervisor extends Employee{
+
+}
+/*
+let m1=new Manager("Smith","HR Manager",300000)
+// console.log(m1)
+m1.getSalary()
+*/
+let s1=new Supervisor("Peter","Operation",40000)
+s1.getSalary()
+/*  */
