@@ -11,5 +11,17 @@ body{
     background-color: black;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
+}
+/* @media(max-width:767px) {
+    h1{
+        display: none;
+    }
+} */
+.show{
+    display: block;
+}
+.hide{
+    display: none;
 }
