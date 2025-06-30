@@ -1,9 +1,20 @@
+// function myFirst(){
+//     myDisplayer("Hello")
+// }
+// function mySecons(){
+//     myDisplayer("Goodbye")
+// }
+
+// myFirst()
+// mySecond()
+
 function myFirst(){
-    myDisplayer("Hello")
+    myDisplaye("Hello")
 }
-function mySecons(){
+function mySecond(){
     myDisplayer("Goodbye")
 }
 
-myFirst()
 mySecond()
+myFirst()
+
