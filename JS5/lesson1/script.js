@@ -71,8 +71,10 @@ document.body.innerHTML=''
 /* Number and Math */
 /* order operation called operator precedence
 ---  * /are done first it has same priority so calaculate from left to write
----  +/ are done after
+---  + -
+ are done after
 ---  () brackets have the higher priority in the order of operation using this priority changes calculation inside the brackets done first
+>,< lower priority
 2+2
 2-2
 10*3

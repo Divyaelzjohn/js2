@@ -8,12 +8,53 @@
 <body>
   <p>Card Quantity</p>
   <button onclick=" 
-  console.log(`Cart quantity:${cartQuantity}`)
+  console.log(`Cart quantity:${cartQuantity}`);
   ">Show Quantity</button>
-  <button>Add to Cart</button>
-  <button>+2</button>
-  <button>+3</button>
-  <button>Reset Cart</button>
+  <button onclick="
+  // cartQuantity=cartQuantity+1;
+  // cartQuantity += 1;
+  cartQuantity++;
+  console.log(`Cart quantity:${cartQuantity}`);
+  ">Add to Cart</button>
+  <button onclick="
+  // cartQuantity=cartQuantity+2;
+  cartQuantity += 2;
+  console.log(`cartQuantity:${cartQuantity}`);
+  ">+2</button>
+  <button onclick="
+  // cartQuantity=cartQuantity+3;
+  cartQuantity += 3;
+  console.log(`cartQuantity:${cartQuantity}`);
+  ">+3</button>
+  <button onclick="
+  cartQuantity+= 4
+  console.log(`cartQuantity:${cartQuantity}`)
+  ">+4</button>
+  <button onclick="
+  cartQuantity += 5
+  console.log(`cartQuantity:${cartQuantity}`)
+  ">+5</button>
+  <button onclick="
+  cartQuantity--;
+  console.log(`cartQuantity:${cartQuantity}`)
+  ">Remove Cart</button>
+  <button onclick="
+  cartQuantity-=2;
+  console.log(`cartQuantity:${cartQuantity}`)
+  ">-2</button>
+  <button onclick="
+  cartQuantity-=3;
+  console.log(`cartQuantity:${cartQuantity}`)
+  ">-3</button>
+  <button onclick="
+  cartQuantity=0;
+  console.log(`Cart was reset`);
+  console.log(`cartQuantity:${cartQuantity}`);
+  ">Reset Cart</button>
   <script src="script.js"></script>
 </body>
 </html>
+
+<!-- short cuts for reassigning variable using += , ++ -->
+<!-- Best practies for naming variable -->
+ 
