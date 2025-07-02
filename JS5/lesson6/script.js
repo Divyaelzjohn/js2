@@ -126,25 +126,75 @@ Note:try to use the || operator in your solution
 -Try changing the 'age' variable diffrent message
 */
 
+const age=5;
+
+if(age<=6||age>=65){
+  console.log('Discount')
+}else{
+  console.log('No discount')
+}
+
 /* 6e.Continuing from exercise 6d, lets say the discount is only availble if it is not a holiday. Create a variable:const isHoliday=true;
 -update the code so that in order to get a discount , people must meet the age requirement and it is also not a holiday
 -Note:&& has a higher priority than |\ so you may need to use bracjets() to control which code gets done first
 -Try changing the value of isHoliday to display diffrent messages
 */
 
+const isHoliday=true;
+
+if((age<=6 || age>=65)&& !isHoliday){
+  console.log('Discount')
+}else{
+  console.log("No discount")
+}
+
 // we'll create a coin-flip game 
 /* 6f.Generate a random number with Math.random().save it in a variable */
-/* 6h.Instead of displaying 'heads  or 'tails' in te console.log , save the result in a variable called 'result'*/
+
+// const randomNumber=Math.random()
+// if(randomNumber<0.5){
+//   console.log('Heads')
+// }else{
+//   console.log('Tails')
+// }
+
+/* 6h.Instead of displaying 'heads'  or 'tails' in te console.log , save the result in a variable called 'result'*/
+
+// let result;
+// if(randomNumber<0.5){
+//   result='Heads'
+// }else{
+//   result='Tails'
+// }
+// console.log(result)
+
 /* 6i.Let's say we're trying to guess the result . Create a variable called 'guess  and save your guess('heads' or 'tails')
 -if your guess matches the result, display 'You Win!' in the console
 -If your guess does not match the result , display 'You lose!'*/
+
+// let guess='Tails';
+// if(guess===result){
+//   console.log('You Win')
+// }else{
+//   console.log('You lose')
+// }
+
 /* (Challenge) instead of using if-statement in the previous exercise try switching them into ternary operator(condition?A:B) */
+
+const result=randomNumber<0.5? 'Heads':'Tails';
+console.log(result)
+
+const guess='Tails';
+console.log(guess===result?'You win!':'You lose')
+
 /* 6k.Lets say the cart has maximum quantity of 10. before updating the quantity , check if the quantity will be greater than 10:
 -if it will , display a popup saying  ;The cart is full  and don't update the quantity
 -Otherwise, update the quantity and cosole.log() as usual
 */
+
 /* 6i. in exercise 5i-5k ,we create the 'Remove from cart ,'-2' , and '-3' buttons. Before updating the quantity, check if it will go below 0:
 -If it will , create a popup saying 'Not enough items in the cart' and don;t update the quantity 
 -Otherwise , update the quantity and console.log() it as usual
 */
+
 /*  */
