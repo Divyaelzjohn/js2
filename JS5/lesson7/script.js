@@ -98,20 +98,102 @@ Note:return a string, and try to reuse the functions from 7d and 7e.*/
 -convertLength(32,'km','miles')
 */
 
+// function convertLength(length, from, to){
+//   if(from==="km" && to==='miles'){
+//     return `${length / 1.6} miles`
+//   }else if(from === "miles" && to ==='km'){
+//     return `${length} ${to}`
+//   }
+// }
+// console.log(convertLength(50, 'miles','km'))
+// console.log(convertLength(32, 'km','miles'))
+// console.log(convertLength(50, 'km', 'km'))
+
 /* 7h.update convertLength to supoort converting between km,miles, and also feet.Note:1mile=5280 ft,1km=3281 ft(approximately).
 -convertLength(5,'miles','km')=>'8km'
 -convertLength(5,'miles','ft')=>'26400 ft'
 -convertLenghth(5,'km','ft')=>'16405 ft' */
 
+// function convertLength(length, from, to){
+//   if(from==='km' && to==='miles'){
+//     return `${length/1.6} ${to}`
+
+//   }else if(from==='km' && to ==='ft'){
+//       return `${length*3281}${to}`
+
+//   }else if(from==='miles'&& to==='km'){
+//     return `$(length *1.6)${to}`
+
+//   }else if(from==='miles' && to ==='ft'){
+//     return`${length*5280} ${to}`
+
+//   }else if(from==='ft' && to ==='km'){
+//     return `${length/3281} ${to}`
+
+//   }else if(from ==='ft' && to ==='miles'){
+//     return`${length/5280}`
+
+//   }else if(from===to){
+//     return`${length} ${to}`
+//   }
+// }
+// console.log(convertLength(50, 'miles','km'))
+// console.log(convertLength(32,'km','miles'))
+// console.log(convertLength(50,  'km','km'))
+// console.log(convertLength(5, 'miles','km'))
+// console.log(convertLength(5, 'km','ft'))
+
 /* 7i.Update convertLength so that if you give it an invalid unit , it will return `Invalid unit:${unit}'.
 -convertLength(5,'lbs','lbs')=>'Invalid unit:'lbs' */
+
+// function convertLength(length, from, to){
+//   if(from !=='km' && from!=='miles' && from !=='ft'){
+//     return`Invalid unit:${from}`
+
+//   }else if (to!=='km' && from!=='miles'){
+//     return `Invalid unit:${to}`
+
+//   }
+//   if(from ==='km'&& to ==='miles'){
+//     return `${length/1.6} ${to}`
+
+//   }else if(from ==='km' && to ==='ft'){
+//     return `${length*3281} ${to}`
+
+//   }else if(from ==='miles' && to ==='km'){
+//     return `${length/1.6} ${to}`
+
+//   }else if(from ==='miles'&& to==='ft'){
+//     return `${length*5280} ${to}`
+
+//   }else if(from ==='ft' && to =="km"){
+//     return `${length/3281} ${to}`
+
+//   }else if(from ==='ft'&& to==='miles'){
+//     return `${length/5280} ${to}`
+
+//   }else if(from===to){
+//     return `${length}${to}`
+//   }
+// }
+// console.log(convertLength(50,'miles','km'))
+// console.log(convertLength(32,'km','miles'))
+// console.log(convertLength(50,'km','km'))
+// console.log(convertLength(50,'miles','km'))
+// console.log(convertLength(5, 'miles','ft'))
+// console.log(convertLength(5, 'km','ft'))
+
+// console.log(convertLength(5, 'lbs','lbs'))
 
 /* 7j. Create a copy of the calculator project from exercise 5r (if you didn't do 5r, copy the code for 5r from the solutions)
 -Notice there's a lot of duplicated code in the buttons.
 -create a function 'updateCalculation  and reuse the code*/
+
 
 /* 7k.Create a copy of the cart quantity project from exercise 6i.
 -create a function 'updateCartQuantity  and reuse the code.*/
 
 /* 7i.Modify 'updateCartQuantity' so  that if the quantity is invalid , alert();
 and then return;(this is caleed an early return.). An early return make our code cleaner because we can remove the 'else-if'/'else' */
+
+/*  */

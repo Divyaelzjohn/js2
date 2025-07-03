@@ -1,3 +1,108 @@
+// objects- groups mulatiple values together
+
+// const product={
+//   name:'socks',
+//   price: 1090
+// }
+// console.log( product)
+// console.log(product.name)
+// console.log(product.price)
+
+// product.name='cotton socks'
+// console.log(product)
+
+// product.newProprety=true;
+// console.log(product)
+
+// product.newProprety=true
+// console.log(product)
+
+// delete product.newProprety;
+// console.log(product)
+
+/* Why we use objects? -make our code more organized -let us group multiple values together
+-let us use multiple values together */
+
+/* Bracket Notation
+-let us use properties that dont work with dot notaion */
+
+/* which one shold we use?
+-use dot notatiom by default
+-for properties that don't work, use bracket notaion 
+*/
+
+/* const product2={
+  name:'shirt',
+  'delivery-time': '1 day',
+  rating:{
+    stars:4.5,
+    count:87
+  },
+  fun: function function1(){
+    console.log('function inside object')
+  }
+ }
+//  function is another type of value 
+// function inside object is called method
+console.log(product2)
+console.log(product2.name)
+console.log(product2['name'])
+console.log(product2['delivery-time'])
+console.log(product2.rating.count)
+product2.fun();
+
+console.log(typeof console.log)
+*/
+
+/* build in objects 
+-Math
+-console
+-JSON
+-local storage
+*/
+
+
+/* JSON-javascript notation
+   a syntax similar to javascript object 
+   -when we send data between computer
+   -Used to store data */
+
+/* JSON OBJECT IS USED TO CONVERT JAVASCRIPT OBJECT TO JSON */
+
+const product2={
+  name:'shirt',
+  'delivery-time': '1 day',
+  rating:{
+    stars:4.5,
+    count:87
+  },
+  fun: function function1(){
+    console.log('function inside object')
+  }
+ }
+console.log(product2)
+console.log(product2.name)
+console.log(product2['name'])
+console.log(product2['delivery-time'])
+console.log(product2.rating.count)
+product2.fun();
+
+/* convert javascript into JSON */
+
+console.log(typeof console.log)
+console.log( JSON.stringify(product2));
+
+/* convert JSON into javascript */
+console.log(JSON.stringify(product2));
+console.log(JSON.parse(jsonString))
+
+
+/* variables are temporary
+-if we refresh/close the page , all the variable are deleted 
+-localstorage save values more permanently
+-variables are temporary*/
+
+
 /* 8a.Let's say in the amazon project , we have a basketball product. This product has a name of 'basketball', a price of 2095 cents. Create an object to represent this product and display it in the console */
 /* 8b.Continuing from 8a, let's say we want to increase the price by 500 cents.Use dot notaion to increase the price , and display the updated objects in the console. */
 

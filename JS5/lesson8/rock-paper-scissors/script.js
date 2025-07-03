@@ -1,5 +1,17 @@
 // let computerMove='';
 
+// const score={
+//   wins:0,
+//   losses:0,
+//   ties: 0
+// };
+
+// console.log(localStorage.getItem('message'));
+
+const score=JSON.parse(localStorage.getItem('score'))
+
+// console.log(JSON.parse(localStorage.getItem('score')))
+
 function pickComputerMove(){
   const randomNumber=Math.random();
 
@@ -15,23 +27,7 @@ function pickComputerMove(){
     computerMove='Scissors'
   }
   return computerMove;
-  // console.log('after')
 }
-/* scope
--limit where a variable exists */
-
-/* Return Statement
--lets us get a value out of a function */
-
-/* following the code line-by-line=tracing the code */
-
-/* compare the 2 solutions:
--Global variable 
--return  
-
-best practice- keep variable inside a scope
-*/
-
 function playGame(playerMove){
   const computerMove=pickComputerMove();
 
@@ -61,6 +57,21 @@ function playGame(playerMove){
       result='You win'
     }
   }
-  alert(`You picked ${playerMove}. Computer picked ${computerMove}.${result}`)
+
+  if(result==='You win'){
+    score.wins+=1
+  }else if(result==="You lose"){
+    score.losses+=1
+  }else if(result='Tie'){
+    score.ties+=1
+  }
+
+  // localStorage.setItem('messsage','hello')
+  localStorage.setItem('score',JSON.stringify)
+
+  alert(`You picked ${playerMove}. Computer picked ${computerMove}.${result}Wins:${score.wins},Losses:${score.losses},Tie:${score.ties}`)
 }
 
+/* local storage only support string */
+
+rt
