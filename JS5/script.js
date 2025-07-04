@@ -164,21 +164,62 @@ properties can be changed , added, deleted, and some are read only */
 // // document.getElementById("demo").innerHTML=myObj.myCars["car2"]
 // document.getElementById("demo").innerHTML=myObj["myCars"]
 
-const person={
-  firstName:"John",
-  lastName:"Doe",
-  id:5566,
-  fullName:function(){
-    return this.firstName+" "+this.lastName
-  }
-}
+// const person={
+//   firstName:"John",
+//   lastName:"Doe",
+//   id:5566,
+//   fullName:function(){
+//     return this.firstName+" "+this.lastName
+//   }
+// }
 
 // document.getElementById("demo").innerHTML=person.fullName()
 
-person.name=function(){
-  return this.firstName+" "+this.lastName;
-}
+// person.name=function(){
+//   return this.firstName+" "+this.lastName;
+// }
 
-document.getElementById("demo").innerHTML="My father is "+person.name()
+// document.getElementById("demo").innerHTML="My father is "+person.name()
 
-/**/
+/*  */
+
+
+// const cars=["Saab","Volvo","BMW"]
+// document.getElementById("demo").innerHTML=cars;
+
+// const cars=[
+//   "Saab",
+//   "Volvo",
+//   "BMW"
+// ]
+// document.getElementById("demo").innerHTML=cars
+
+// const cars=[];
+// cars[0]="Saab";
+// cars[1]="Volvo";
+// cars[2]="BMW"
+// document.getElementById("demo").innerHTML=cars
+
+
+// const cars=["Saab","Volvo","BMW"]
+// document.getElementById("demo").innerHTML=cars[0]
+
+// const cars=["Saab","Volvo","BMW"]
+// cars[0]="Opel";
+// document.getElementById("demo").innerHTML=cars
+
+
+// const fruits=["Banana","Orange","Apple","Mango"]
+// let myList=fruits.toString()
+// document.getElementById("demo").innerHTML=myList
+
+
+// const cars=["saab","Volvo","BMW"];
+// document.getElementById("demo").innerHTML=cars;
+
+// const person=["John","Doe",46]
+// document.getElementById("demo").innerHTML=person[0]
+
+const person={firstName}
+
+/**llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
