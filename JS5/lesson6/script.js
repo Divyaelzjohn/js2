@@ -45,7 +45,7 @@ false ,
 NaN,not a value '('text'/16)'
 undefined, something doesnt have a value
 null
-// */
+*/
 // if(0){
 //   console.log('truthy')
 // }
@@ -100,6 +100,18 @@ message='hello
 -If hore is between 13 and 17, display 'Good afternoon' in the console 
 -otherwise , display 'Good night!' in the console
 */
+
+const hr=12;
+if(hr>=6 && hr<=12){
+  console.log("Good morning")
+}
+else if(hr>=13 && hr<=17){
+  console.log(Good afternoon)
+}else{
+  console.log("Good night")
+}
+
+
 /* 6b.Continuing from 6a , try changing the value in the 'hour' variable to make it display diffrent messages. */
 /* 6c.Continuing from 6a , create a variable called 'name' and save your name inside(as a string). Update the if-statement to display your name in eah message. For example:'Good morning ${name}!' */
 
@@ -147,6 +159,7 @@ if((age<=6 || age>=65)&& !isHoliday){
 }else{
   console.log("No discount")
 }
+
 
 // we'll create a coin-flip game 
 /* 6f.Generate a random number with Math.random().save it in a variable */
@@ -197,4 +210,3 @@ console.log(guess===result?'You win!':'You lose')
 -Otherwise , update the quantity and console.log() it as usual
 */
 
-/*  */

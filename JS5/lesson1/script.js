@@ -12,7 +12,6 @@ A technology that we use to create websites
 // console.log(10-3)
 // document.body.innerHTML='Hello';
 
-
 /*
 Syntax
 rules that we have to follow when using a programming language
@@ -63,6 +62,7 @@ console.log(100+20-50+200)
 
 document.body.innerHTML=''
 */
+
 
 
 
@@ -212,10 +212,10 @@ console.log(Math.ceil(2.2))
 // Add two String
 // console.log('some'+'text')
 // console.log('some'+'more'+'text')
-
+/* nvvbvbvbvvbvb */
 // console.log(typeof 2)
 // console.log(typeof 'hi')
-// console.log('hello'+3)                  //in this 3 converted into string  , it is called type conversion
+// console.log('hello'+3)                  //in this 3 converted into string  , it is called type coercion
 // // console.log('$28.94')
 // // console.log('$'+20.95+7.99)          //this is not right
 // console.log('$'+(20.95+7.99))
@@ -226,7 +226,7 @@ console.log(Math.ceil(2.2))
 // alert('Items('+(1+1)+'):$'+((2095+799)/100))
 
 /* crate a string in JS */
-
+/* hghhhhhhhhhh */
 // 1.using Single ''
 // console.log('Hello')
 // 2.using ""
@@ -246,7 +246,6 @@ alert('some\ntext')
 // interpolution is cleaner ,multiline string
 // console.log(`hello`)
 // console.log(`Items(${1+1}):$${(2095+799)/100}`)
-
 
 
 /* exercise */
@@ -308,202 +307,4 @@ console.log(`Total before tax:$${(2*2095+2*799+499+499)/100}`)
 // 3n.create fourth line of text:'Estimated tax(10%):$6.79'(use math and Math.round(..); to calculate the exact number)
 
 console.log(`Estimated tax(10%):$${Math.round((2*2095+2*799+499+499)*0.1)/100}`)
-*/
-
-
-
-// Adding of two number
-
-/*let a=5;
-let b=3;
-let sum=a+b;
-console.log("Sum: ",sum)*/
-
-//  Find Even or Odd
-
-/*let num=7
-if(num%2===0){
-  console.log("Even")
-}else{
-  console.log("Odd")
-}*/
-
-// factorial of a number
-/*let n=5; 
-let fact=1;
-
-for(let i=1;i<=n;i++){
-  fact=fact*i
-}
-console.log("Factorial: ",fact)*/
-
-// check prime number
-
-// let number=13;
-// let isPrime=true;
-
-// if(number<2){
-//   isPrime=false;
-// }
-// for(let i=2;i<number;i++){
-//   if(number%i===0){
-//     isPrime=false;
-//     break;
-//   }
-// }
-// if(isPrime){
-//   console.log("Prime")
-// }else{
-//   console.log("Not Prime")
-// }
-
-/*
-function addNumbers(){
-  let a=Number(document.getElementById("add1").value)
-  let b=Number(document.getElementById("add2").value)
-  document.getElementById("evenResult").textContEnt=a+b;
-}
-
-function findFacorial(){
-  let num=Number(document.getElementById("tableInput").value);
-  let output="";
-  for(let i=1;i<=10;i++){
-    output +=`${num}+++++x ${i}=${num*i}\n`
-  }
-  document.getElementById("tableOutput").textContent=output
-}
-
-function checkEvenodd(){
-  let a=Number(document.getElementById("add1").value)
-  let b=Number(document.getElementById("add2").value)
-  document.getElementById("evenResult").textContent=a+b
-}
-*/
-
-// find largestv of number
-/*
-let a=10, b=25, c=15;
-let largest;
-if(a>b && a>c){
-  largest=a;
-}else if(b>c){
-  largest=b;
-}else{
-  largest=c;
-}
-console.log("Largest: ",largest)
-*/
-
-// Sum of Digits
-
-/*let num=1234;
-let sum=0;
-while(num>0){
-  let digit=num%10;
-  sum+=digit;
-  num=Math.floor(num/10)
-}
-console.log("Sum of digits: ",sum)*/
-
-// reverse a String
-
-/*let num=567;
-let reversed=0;
-
-while(num>0){
-  let digit=num%10;
-  reversed=reversed*10+digit
-  num=Math.floor(num/10)
-}
-console.log("Reversed: ",reversed)
-*/
-
-// check if number is a palindrome
-/*
-let num=122;
-let original=num;
-let reversed=0;
-
-while(num>0){
-  let digit=num%10;
-  reversed=reversed*10+digit
-}
-if(original===reversed){
-  console.log("Palindrome")
-}
-else{
-  console.log("Not a palindrome")
-}
-*/
-
-// check if number is a perfect number
-
-/*let num=49;
-let root=Math.sqrt(num)
-if(root===Math.floor){
-  console.log("perfect squre")
-}else{
-  console.log("Not a perfect squre")
-}
-*/
-
-// Armstrong number check
-/*
-let num=155;
-let original=num;
-let sum=0;
-let digits=num.toString().length;
-
-while(num>0){
-  let digit =num%10;
-  sum+=digit**digits;
-  num=Math.floor(num/10)
-}
-console.log((sum===original)?"Armstrong Number":"Not  Armstrong")
-*/
-
-// HCF and LCM of two numbers
-/*
-let a=20;
-let b=30;
-let hcf=1
-
-for(let i=1;i<=a&& i<=b;i++){
-  if(a%i===0 && b%1===0){
-    hcf=i
-  }
-}
-let lcm=(a*b)/hcf
-console.log("HCF", hcf)
-console.log("LCM:",lcm)
-*/
-
-// squre root 
-
-/*let n=32;
-let guess=n/2;
-let epsion=0.00001;
-while(Math.abs(guess*guess-n)>epsilon){
-  guess=(guess+n/guss)/2
-}
-console.log("squre Root=",guess.toFixed(5))
-*/
-
-// Armstrong number
-
-/*let num=9876;
-let original=num;
-let sum=0;
-let digits=num.toString().length;
-
-while(num>0){
-  let digit=num%10;
-  let power=1;
-  for(let i=0;i<=digits;i++){
-    power+=digit
-  }
-  sum+=power;
-  num=Math.floor(num/10)
-}
-console.log(sum===original?"Armstrong Number":"Not Armstrong")
 */

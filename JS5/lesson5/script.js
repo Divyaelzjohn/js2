@@ -27,7 +27,7 @@
 // x= x+1
 // console.log(x)
 
-
+/* */
 
 /* 3 ways to create variables in JS */
 
