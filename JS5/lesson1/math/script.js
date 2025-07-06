@@ -393,3 +393,80 @@ document.getElementById("demo").innerHTML=answer1+"<br>"+answer2+"<br>"+answer3*
 // document.getElementById("demo").innerHTML=(x==y)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let a=10;
+// let b=20;
+// let sum=a+b;
+// console.log("sum:",sum)
+
+// let number=0;
+// if(number % 2 ===0){
+//   console.log("Even")
+// }else{
+//   console.log("odd")
+// }
+
+// reverse a String
+/*
+let str="hello";
+let reversed=" ";
+for(let i=str.length-1;i>=0;i--){
+  reversed+=str[i]
+}
+console.log("Reversed",reversed)
+
+let num=5;
+let fact=1;
+for(let i=1;i<=num;i++){
+  fact+=i;
+}
+console.log("Factorial",fact)
+
+
+let number=1234;
+let sum=0;
+while (number>0){
+  sum+=number % 10;
+  number=Math.floor(number/10)
+}
+console.log("sum of digits",sum)
+
+// check prime number
+let n=7;
+let isPrime=true;
+for(let i=2;i<n;i++){
+  if(n%i===0){
+    isPrime=false;
+    break;
+  }
+}
+console.log(isPrime?"Prime":"Not Prime")
+
+let num=3;
+for(let i=1;i<=10;i++){
+  console.log(`${num}x${i}=${num*i}`)
+}
+
+let a=10,b=25,c=15;
+let max;
+if(a>b&&a>c){
+  max=a;
+}else if(b>c){
+  max=b;
+}else{
+  max=c
+}
+console.log("Largest ",max)
+*/
