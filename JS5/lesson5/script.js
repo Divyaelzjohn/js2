@@ -100,5 +100,5 @@ console.log(`Total cost $${totalCost}`)
 :calculation=eval(calculation);
 -Display the result in the console:conosle.log(calculation);*/
 /* 5r. create the rest of the buttons in the calculator. To create multiple rows of buttons , put the buttons inside <p> element like this:
+*/                
 
-*/                    

@@ -44,3 +44,34 @@
 
 // let text="sdfghjkl";
 // console.log(text.length)
+
+
+// var text="hello world";
+// document.getElementById("demo").innerHTML=text.charAt(0)
+
+// let text="Hello World";
+// let code=text.codePointAt(0);
+// document.getElementById("demo").innerHTML=code;
+
+// const name="HWUUU";
+// let letter=name.at(2)
+// document.getElementById("demo").innerHTML=letter
+
+// let text="Hello world";
+// document.getElementById("demo").innerHTML=text[0]
+
+// let text="5";
+// text=text.padStart(4,"0");
+// document.getElementById("demo").innerHTML=text;
+
+// let text="a,b,c,d,e,f";
+// const myArray=text.split(",");
+// document.getElementById("demo").innerHTML=myArray[4]
+
+// let text="please locate where 'locate' occurs!";
+// let index=text.indexOf("locate");
+// document.getElementById("demo").innerHTML=index;
+
+let text="Hello world, welcome to the universe";
+text.includes("world");
+document.getElementById("demo").innerHTML=text.includes("world")

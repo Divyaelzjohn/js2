@@ -1,8 +1,8 @@
 // let computerMove='';
-
+/*  */
 function pickComputerMove(){
   const randomNumber=Math.random();
-
+  /*  */
   let computerMove='';
 
   if(randomNumber>=0 && randomNumber<=1/3){
@@ -36,6 +36,7 @@ function playGame(playerMove){
   const computerMove=pickComputerMove();
 
   let result='';
+  /* fddssssssrtrtrt */
   if(playerMove ==='Scissors'){
     if(computerMove==='Rock'){
       result='You lose'
@@ -63,4 +64,3 @@ function playGame(playerMove){
   }
   alert(`You picked ${playerMove}. Computer picked ${computerMove}.${result}`)
 }
-

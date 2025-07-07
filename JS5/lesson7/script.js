@@ -2,25 +2,27 @@
 -This only creates a funcyion. It doesn't run code inside */
 
 /*function function1(){
-  console.log('Hello')
+  console.log('hello')
   console.log(2+2)
 }
-function1()
-*/
+function1()*/
+
 
 /* return = gets a value out of a function
 Parameter=puts a value into a function */
 
+/*// function calculateTax(parameter1){
+function calculateTax(cost, taxpercent=0.1){
+  // console.log(1000*0.1)
+  console.log(taxpercent)
+  console.log(cost*taxpercent)
+}
 
-// function calculateTax(cost, taxpercent=0.1){
-//   // console.log(1000*0.1)
-//   console.log(taxpercent)
-//   console.log(cost*taxpercent)
-// }
+calculateTax(2000, 0.2)
 
-// calculateTax(2000, 0.2)
+calculateTax(5000)*/
 
-// calculateTax(5000)
+
 
 /* 7a. Create a function called 'greet' that display the message 'Hello!' int he console . call/run this function a few times using : greet()  */
 // function greet(){
@@ -29,6 +31,12 @@ Parameter=puts a value into a function */
 
 // greet()
 // greet()
+
+/*function greet(name){
+  console.log(`hello${name}`)
+}
+greet('simon')*/
+
 
 /* 7b.Continuing from 7a , add a parameter called 'name' to the 'greet' function and display a few times with diffrent names:greet('Simon')*/
 
@@ -73,6 +81,8 @@ Parameter=puts a value into a function */
 -convertTemperature(25,'C')=>'77F'
 -convertTemperature(86,'F')=>'30C'
 Note:return a string, and try to reuse the functions from 7d and 7e.*/
+
+
 
 // function convertToFahrenheit(celcius){
 //   return (celcius*9/5)+32
