@@ -87,5 +87,4 @@ function pickComputerMove(){
   return computerMove;
 }
 /* local storage only support string */
-
  
