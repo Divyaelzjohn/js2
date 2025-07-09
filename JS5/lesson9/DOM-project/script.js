@@ -2,8 +2,8 @@ String(25)
 console.log('25'-5)
 console.log('25'+5)
 window.document
-window.console.log('window')
-window.alert("hi")
+// window.console.log('window')
+// window.alert("hi")
 
 function handleCostDown(event){
   console.log(event.key)

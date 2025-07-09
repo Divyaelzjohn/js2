@@ -1,47 +1,142 @@
-
-// document.body.innerHTML="hello";
-// document.title='Good job'
+// document.getElementById("demo").innerHTML="Hello World!"
 
 
-/*console.log(document.title);
-document.title='Changed';
+// const element=document.getElementById("id01");
+// element.innerHTML="New heaing"
 
-console.log(document.body)
-console.log(typeof document.body)
+// document.getElementById("demo").innerHTML="Date: "+Date();
 
-console.log(document.body.innerHTML)
-document.body.innerHTML='<button>Good Job</button>'*/
+// document.write(Date())
+
+/*function validateForm(){
+  let x=document.forms["myForm"]["fname"].value;
+  if(x==" "){
+    alert("Name must be filled out");
+    return false
+  }
+}*/
 /*
-console.log(document.querySelector('button').innerHTML)
-document.querySelector('button')
-  .innerHTML='Changed'
+function changeText(id){
+  id.innerHTML="Oops!"
+}*/
 
-  // document.querySelector('.btn').innerHTML='gwewe'
+/*function displayDate(){
+  document.getElementById("demo").innerHTML=Date()
+}*/
 
-const buttonElement=document.querySelector('.btn')
-console.log(buttonElement)
+/*document.getElementById("myBtn").onclick=displayDate;
+function displayDate(){
+  document.getElementById("demo").innerHTML=Date()
+}*/
+
+/*function checkCookies(){
+  let text=" ";
+  if(navigator.cookieEnabled==true){
+    text="Cookies are enabled"
+  }else{
+    text="Cookies are not enabled"
+  }
+  document.getElementById("demo").innerHTML=text
+}*/
+
+/*function upperCase(){
+  const x=document.getElementById("fname")
+  x.value=x.value.toUpperCase()
+}*/
+/*
+function mOver(obj){
+  obj.innerHTML="Thank You"
+}
+function mOut(obj){
+  obj.innerHTML="Mouse Over Me"
+}*/
+/*
+function mOver(obj){
+  obj.innerHTML="Thank You"
+}
+function mOut(obj){
+  obj.innerHTML="Mouse Over Me"
+}*/
+/*
+function mDown(obj){
+  obj.style.backgroundColor="#lec5e5"
+  obj.innerHTML="Release Me"
+}
+function mUp(obj){
+  obj.style.backgroundColor="#lec5e5";
+  obj.innerHTML="Release Me"
+}
+function mUp(obj){
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You"
+}*/
+/*
+document.getElementById("myBtn").addEventListener("click",displayDate);
+
+function displayDate(){
+  document.getElementById("demo").innerHTML=Date()
+}*/
+/*
+document.getElementById("myBtn").addEventListener("click",function(){
+  alert("Hello World!")
+})*/
+/*
+var x=document.getElementById("myBtn");
+x.addEventListener("click",myFunction);
+x.addEventListener("click",someOtherFunction);
+
+function myFunction(){
+  alert("Hello world")
+}
+function someOtherFunction(){
+  alert("This function also executed")
+}
 */
+/*
+var x=document.getElementById("myBtn");
+x.addEventListener("mouseover",myFunction);
+x.addEventListener("click",mySecondFunction);
+x.addEventListener("mouseout",myThirdFunction);
 
+function myFunction(){
+  document.getElementById("demo").innerHTML+="Moused over!<br>";
+}
 
-/* 9a.create a <button>9a</button>.Use document.querySelector('button) to get the button from the page, and then display it in the console */
+function mySecondFunction(){
+  document.getElementById("demo").innerHTML+="clicked <br>"
+}
+function myThirdFunction(){
+  document.getElementById("demo").innerHTML+="Moused out"
+}*/
 
-/* 9b.continue from 9a, create another button <button>9b</button> below.Using javascript, change the text in the second button to '9b done!'(hint:add a class and use.querySelector) */
+/*
+window.addEventListener("resize",function(){
+  this.document.getElementById("demo").innerHTML=Math.random()
+})*/
 
-/* 9c.Create 2 buttons 'heads  and 'tails*, and a  paragraph(<p></p>) underneath. Whwn clicking the 'heads' button , display 'You chose:heads' in the paragrph.when the 'tails' button, display 'You chose:tails'/
+/*
+let p1=5;
+letp2=7;
+document.getElementById("myBtn").addEventListener("click",function(){
+  myFunction(p1,p2)
+})
 
-/* 9d.create a text box(<input>) and a submit button.When clicking 'Submit', display 'Your name is:${text}' on  the page (${text=the text inside the text box})(hint:use.value to get the text inside an <input>) */
+function myFunction(a,b){
+  document.getElementById("demo").innerHTML=a*b
+}*/
 
-/* 9e.Modify exercise 9d so that when you press 'Enter' in the <input>, it will also display the same message on the page(hint:use onkeydown and the event object) */
+document.getElementById("myP1").addEventListener("click",function(){
+  alert("You clicked the white element")
+},false)
 
-/* 9f.Continuing from 9e, create a function to reuse the code(if you already did this , skip this exercise) */
+document.getElementById("myDiv1").addEventListener("click",function(){
+  alert("You clicked the orange element!")
+},false)
 
-/* 9g.Create a file 9g.html and copy the code from 09-dom-projects.html into this file.In the Amazon Shipping Calculator, enter a cost of 7.99 and click 'Calculate'.What issue do you see? Find a fix for this issue. */
+document.getElementById("myp2").addEventListener("click",function(){
+  alert("You clicked the orange element!")
+},true);
 
-/* 9h.Let's create the project on the right:
--Whenever we type in the text box, update the text on the page.
--To do  this , we'll learn another event caleed <input onkeyup="...">.
--This runs code after we press a key and release it(key comes up). */
-
-/* 9i.We'll  improve the cart quantity project.
--Make a copy of exercise 7i(see the solution for 7i if needed) 
--Create a paragraph (<p></p>)*/
+document.getElementById("myDiv2").addEventListener("click",function(){
+  alert("you clicked the orange element!")
+},true)

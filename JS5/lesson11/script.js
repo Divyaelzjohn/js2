@@ -25,3 +25,4 @@ console.log(myArray)
 myArray.splice(0, 1)
 console.log(myArray)
 
+/* */
