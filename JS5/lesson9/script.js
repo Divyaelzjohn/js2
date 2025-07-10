@@ -124,7 +124,7 @@ document.getElementById("myBtn").addEventListener("click",function(){
 function myFunction(a,b){
   document.getElementById("demo").innerHTML=a*b
 }*/
-
+/*
 document.getElementById("myP1").addEventListener("click",function(){
   alert("You clicked the white element")
 },false)
@@ -139,4 +139,4 @@ document.getElementById("myp2").addEventListener("click",function(){
 
 document.getElementById("myDiv2").addEventListener("click",function(){
   alert("you clicked the orange element!")
-},true)
+},true)*/

@@ -201,8 +201,196 @@ function toUpperCase(){
 //   for(let i=0;i<num.length;i++){
 //     let digit=Number(num[i])
 //     sum+=digit**3;
+//     console.log(sum)
 //   }
 //   const result=(sum==original==original)?"Armstrong Nmber":"Not Armstrong"
 //   document.getElementById('result')
 // }
 
+
+// document.getElementById("id02").innerHTML=document.getElementById("id01").innerHTML;
+
+
+// document.getElementById("id02").innerHTML=document.getElementById("id01").firstChild.nodeValue;
+
+// document.getElementById("id02").innerHTML=document.getElementById("id01").childNodes[0].nodeValue
+
+
+// document.getElementById("demo").innerHTML = document.body.innerHTML;
+
+/*const para=document.createElement("p")
+const node=document.createTextNode("This is new.")
+para.appendChild(node);
+const element=document.getElementById("div1");
+element.appendChild(para)*/
+
+/*const para=document.createElement("p");
+const node=document.createTextNode("this is new")
+para.appendChild(node);
+
+const element=document.getElementById("div1")
+const child=document.getElementById("p1")
+element.insertBefore(para,child)*/
+
+
+// function myFunction(){
+//   document.getElementById("p1").remove()
+// }
+
+// const parent=document.getElementById("div1")
+// const child=document.getElementById("p1");
+// parent.removeChild(child)
+
+
+/*const parent=document.getElementById("div1");
+const child=document.getElementById("p1");
+const para=document.createElement("p");
+const node=document.createTextNode("This is new.");
+para.appendChild(node);
+para.appendChild(node);
+parent.replaceChild(para, child)*/
+
+/*function myFunction(){
+  const myCollection=document.getElementsByTagName("p");
+  for(let i=0;i<myCollection.length;i++){
+    myCollection[i].style.color="red"
+  }
+}*/
+
+/*const myNodelist=document.querySelectorAll("p");
+document.getElementById("demo").innerHTML="the innerHTML of the second paragraph is: "+myNodelist[1].innerHTML*/
+
+/*const myNodelist=document.querySelectorAll("p")
+document.getElementById("demo").innerHTML="this document contains "+myNodelist.length+"paragraphs"*/
+
+
+// function myFunction(){
+//   const myNodelist=document.querySelectorAll("p");
+//   for(let i=0;i<myNodelist.length;i++){
+//     myNodelist[i].style.color="red"
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+//Basic programs
+
+// function changeText(){
+//   document.getElementById("text").innerHTML="Text changed"
+// }
+
+// function toggle(){
+//   let btn=document.getElementById("btn");
+//   if(btn.innerHTML==="Subscribe"){
+//     btn.innerHTML="Unsubscribe";
+//   }else{
+//     btn.innerHTML="Subscribe"
+//   }
+// }
+
+/*function showValue(){
+  let value=document.getElementById("myInput").value;
+  document.getElementById("display").innerHTML=value
+}*/
+
+/*function changeColor(){
+  document.body.style.backgroundColor="lightblue"
+}*/
+
+/*let count = 0;
+function increase() {
+  count++;
+  document.getElementById("counter").innerHTML = count;
+}
+function decrease() {
+  count--;
+  document.getElementById("counter").innerHTML = count;
+}*/
+
+/*
+function hide(){
+  document.getElementById("para").style.display="none"
+}
+function show(){
+  document.getElementById("para").style.display="block"
+}*/
+
+/*function checjArmstrong(){
+  let num=document.getElementById("num").value;
+  let sum=0;
+  let temp=num;
+  let digits=num.length;
+
+  while(temp>0){
+    let digit=temp%10;
+    sum+=digit ** digits;
+    temp=Math.floor(temp/10)
+  }
+
+  if(sum==num){
+    document.getElementById("result").innerHTML="armsrong number"
+  }else{
+    document.getElementById("result").innerHTML="Not Armstrong"
+  }
+}*/
+
+
+/*// sqre root
+function findSquareRoot() {
+  let n = document.getElementById("num").value;
+  let i = 1;
+  while (i * i <= n) {
+    if (i * i === Number(n)) {
+      document.getElementById("output").innerHTML = "Square root is " + i;
+      return;
+    }
+    i++;
+  }
+  document.getElementById("output").innerHTML = "Not a perfect square";
+}*/
+
+
+/*// prime number
+
+function checkPrime(){
+  let num=document.getElementById("num").ariaValueMax;
+  if(num<=1){
+    document.getElementById("primeResult").innerHTML="Not Prime";
+    return;
+  }
+  for(let i=2;i<num;i++){
+    if(num%i===0){
+      document.getElementById("primeResult").innerHTML="Not Prime";
+      return;
+    }
+  }document.getElementById("primeResult").innerHTML="Prime"
+}*/
+
+/*//todo list
+function addTask(){
+  let task=document.getElementById("task").value;
+  if(task.trim()!==""){
+    let li=document.createElement("li")
+    li.innerText=task;
+    document.getElementById("todoList").appendChild(li);
+    document.getElementById("task").value=" "
+  }
+}*/
+
+function pslitBill(){
+  let total =Number(document.getElementById('total').value);
+  let people=Number(document.getElementById("people").value)
+  if(people>0){
+    let result=(total/people).toFixed(2);
+    document.getElementById("perPerson").innerHTML=`Each pays: ₹${result}`
+  }else{
+    document.getElementById("perPerson").innerHTML="People must be>0"
+  }
+}
