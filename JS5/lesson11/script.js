@@ -62,7 +62,7 @@ for(let i=1; i<=5; i++){
 //   console.log(value)
 // }
 
-
+/*
 const nums=[1,1,3]
 let total=0;
 
@@ -79,3 +79,56 @@ for(let i=0;i<nums.length;i++){
   numsDoubled.push(num * 2)
 }
 console.log(numsDoubled)
+*/
+
+// Arrays references
+
+const array1=[1,2,3]
+const array2=array1.slice();
+array2.push(4)
+console.log(array1);
+console.log(array2);
+
+const array3=[1,2,3];
+
+const[firstValue, secondValue]=[1,2,3]
+
+for(let i=1;i<=10;i++){
+  if(i%3===0){
+    continue;
+  }
+  console.log(i)
+  i++
+  // console.log(i)
+  // if(i===8){
+  //   break;
+  // }
+}
+
+let i=1; 
+while(i<=10){
+  if(i%3===0)
+  console.log(i);
+  i++;
+}
+
+function doubleArray(nums){
+  // const nums=[1,1,3]
+  const numsDoubled=[] 
+
+  for(let i=0;i<nums.length;i++){
+    const num=nums[i];
+    if(num===0){
+      return numsDoubled
+    }
+    numsDoubled.push(num*2)
+  }
+  // console.log(numsDoubled)
+  return numsDoubled;
+}
+// doubleArray([1,1,3]);
+// doubleArray([2,2,5])
+
+console.log(doubleArray([1,1,3]))
+console.log(doubleArray([2,2,5,0,5]))
+

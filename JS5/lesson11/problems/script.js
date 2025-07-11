@@ -33,3 +33,41 @@
 /* 11n.Create a function countWords(words) that takes an array of strings and returns an object with how many times  each string appeared.
 -countWords(['apple','grape','apple','grape'])=>{apple:3,grape:1}(HInt:you can access a property using a variable :object[variable];
 This uses the value inside the variable as the property name). */
+
+/* 11o. Create an array of strings, loop over the array, and check if the string 'search' is inside the array. If it is , console.log() the index of 'search' in the array . if Notification, console.log'-1' 
+-['hello','world','search','good']=>console.log(2
+-['not','found']=>console.log(-1*/
+
+/* 11p.Modify 11o so that if 'search' appears multiple times in the array, it will console.log() the index of the first appearance of 'search'. Use break;
+-['hello','worls','search','good','search']=>console.log(2) */
+
+/* 11q.Create a function findIndex(array,word) that searches an array for a string (in the 'word' parameter) and returns the index of the first appearence of the string. If it doesn't exist in the array, retuen -1.
+-findIndex([green','red','blue','red'])=>1
+-findIndex(['green','red','blue','red'],'yellow')=>-1 */
+
+/* 11r.Create a function removeEgg(foods) that takes an array of strings and returns an array where the string 'egg' is removed.(Hint:loop through the array and check if each strinjg is 'egg'.If it is 'egg', use 'continue;' to skip it. If it's not 'egg',add it to the result).
+-removeEgg(['egg','apple','egg','egg','ham'])=>['apple','ham'] */
+
+/* 11s. Update exercise 11r to only remove the first 2 eggs from the array.
+-removeEgg(['egg','apple','egg','egg','egg','ham'])=>['apple','egg','ham'] */
+
+/* 11t.Arrays have a method alled.reverse(),which reverse the order of the values in the array. Uisng.reverse(),update ecrecise 11s to only remove the last 2 eggs from the array.
+-removeEgg(['egg','apple','egg','egg','ham'])=>['egg','apple','hamm'] */
+
+/* 11u.In exercise 11t, one problem with.reversed() is that it doesn't create a copy of the array it is reversing.It modifies the original array. Update the code so the function does not modify the original array.(Hint: use the .slice() method to create a copy of an array's values).
+-const foods=['egg','apple','egg','egg','ham']
+-console.log(removeEgg(foods))=>["'egg','apple','ham']
+-console.log(foods)=>['egg','apple','egg','egg','ham']*/
+
+/* 11v.We'll do the famouse FizzBuzz problem. Create a loop that displays 1 to 20 in the console. If the number is divisible by 3, display 'Fizz' instead of the number. If it's divisible by 5, display 'Buzz' instead. If it's divisible by 3 and 5, display 'FizzBuzz' instead.(Reminder:divisible by 3 means num%3===0)
+-1,2,Fizz.4.Buzz,Fizz,7,8,...13,14,FizzBuzz,16,17,... */
+
+/* 11w.Create a copy of exrecise 11q, where  we created findIndex().Below it, create a function unique(array) that takes an array of strings and returns an array where each string only appears once(there are no duplictes).Try to use the findIndex() function in your solution.
+-unique(['green','red','blue','red'])=>['green','red','blue']
+-unique(['red','green
+,'green','red'])=>['red','green'] */
+
+/* 11x.Create 3 files 11x.html,11x.css,and copy the code for the Todo List projects into  these files.
+-Update the <link> and <script> elemnts to load 11x.css and 11x.js 
+-Update the todo list to use localstorage(if we modify the todo list and refresh the page, the todo list shold stay the same).
+-Hint:remember that localstorage only supporys strings. You can use JSON.stringyfy() to convert an array to a string */
