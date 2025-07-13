@@ -1,18 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container"id="demo">
-  </div>
-  <script src="script.js"></script>
-</body>
-</html> -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,17 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    /* table{
+      border:1px solid white;
+      border-collapse: collapse;
+    }
+    th,td{
+      background-color: #96D4D4;
+    } */
+     td,th{
+      border: 1px solid black;
+      /* border-collapse: collapse; */
+      /* border-radius: 10px; */
+      padding: 15px;
+      border-spacing: 30px;
+     }
+     tr:nth-child(even){
+      background-color: #D6EEEE;
+     }
+     td:nth-child(even){
+      background-color: #D6EEEE;
+     }
+
+  </style>
 </head>
 <body>
-  <!-- <p>
-    <abbr title="HyperText Markup Language">Who</abbr>
-  </p> -->
-  <address>
-    written by <a href="malito:webmaster@example.xom">John</a><br>
-    Visit us at:<br>
-    Examplle.com<br>
-    Box 564, Display <br>
-    USA
-  </address>
+  <table style="width: 100%;">
+    <tr>
+      <th colspan="2">person1</th>
+      <th rowspan="2">person2</th>
+      <th>person3</th>
+    </tr>
+    <tr>
+      <td>emil</td>
+      <td>Thomas</td>
+      <td>linus</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>14</td>
+      <td>10</td>
+    </tr>
+  </table>
+
+  <ul style="list-style-type: square;">
+    <li>coffee</li>
+    <li>tea</li>
+  </ul>
+  <ul>
+    <li>home</li>
+    <li>news</li>
+    <li>contact</li>
+  </ul>
+<!-- h -->
 </body>
 </html>
