@@ -5,9 +5,13 @@ body{
 }
 .container{
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
-  overflow: hidden;
+ gap:10px;
+ padding: 10px;
+ background: #f0f0f0;
+ overflow: hidden;
 }
+.box{
+  background-color: #4cAF50;
+  border: 2px solid #222;
+}
+

@@ -1,8 +1,8 @@
 // let computerMove='';
-/*  */
+
 function pickComputerMove(){
-  const randomNumber=Math.random();
-  /*  */
+  const randomNumber=Math.random()
+
   let computerMove='';
 
   if(randomNumber>=0 && randomNumber<=1/3){

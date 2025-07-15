@@ -1,0 +1,27 @@
+.container{
+  /* background-color: red; */
+  width: 400px;
+  height: 50px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);;
+  padding: 20px;
+  background-color: white;
+}
+img{
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+input{
+  border: none;
+}
+.btn1{
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font: bold;
+  font-size: 15px;
+}

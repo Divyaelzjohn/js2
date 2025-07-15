@@ -1,0 +1,42 @@
+.img{
+  width: 300px;
+  display: block;
+}
+/*input{
+  display: block;
+} */
+.search{
+  /* font-size: 20px;
+  margin-left: 12px; */
+  display: block;
+}
+/* .p2{
+  width: 300px;
+} */
+/* .author,
+.views{
+  display: inline-block;
+} */
+/* .txt{
+  width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+} */
+/* .imag{
+  background: transparent;
+  display: block;
+  width: 200px;
+} */
+/* .Google{
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  box-shadow: 5px 5px 0.9px rgba(0,0,0,0.2);
+  font-size: 16px;
+} */
+.ex{
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+}
