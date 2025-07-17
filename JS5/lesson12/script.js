@@ -95,6 +95,6 @@ object1.fun();
 -Create 2 buttons 'Add'/'Remove' that increase / decrease the 'messagees' variable by1 */
 
 /* 12i.Continueing from 12h:
--DOn't let'message' go below 0.
+-Don't let'message' go below 0.
 -If message === 0 stop changing the title and display 'App' as the title.
 -When message >0 start changing the title again. */
