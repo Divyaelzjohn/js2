@@ -311,4 +311,4 @@ m1.getSalary()
 */
 let s1=new Supervisor("Peter","Operation",40000)
 s1.getSalary()
-/*  */
+

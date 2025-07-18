@@ -1,15 +1,37 @@
+ const container = document.getElementById("boxContainer");
 
-const container = document.getElementById('container');
-for (let i = 1; i <= 20; i++) {
-  const box = document.createElement('div');
-  box.className = 'box';
+    const boxes = [];
+    for (let i = 0; i < 20; i++) {
+      const box = document.createElement("div");
+      const width = Math.floor(Math.random() * 100) + 50; 
+      const height =90; 
+      box.className = "box";
+      box.style.width = width + "px";
+      box.style.height = height + "px";
+      boxes.push(box);
+    }
 
-  const width = Math.floor(Math.random() * 100)+1;  
-  const height = Math.floor(Math.random() * 100)+1;  
+    function renderBoxes() {
+      container.innerHTML = '';    
+      var space = 0;               
+    
+      for (var i = 0; i < boxes.length; i++) {
+        var box       = boxes[i];
+        var boxWidth  = parseInt(box.style.width);
+    
+        if (i !== 0) {      
+          boxWidth += 10;
+        }
+        if (space + boxWidth > container.clientWidth) {
+          break;
+        }
+    
+        container.appendChild(box); 
+        space += boxWidth;          
+      }
+    }
 
-  box.style.width = width + 'px';
-  box.style.height = height + 'px';
+    window.addEventListener("resize", renderBoxes);
+    window.addEventListener("load", renderBoxes);
 
-  container.appendChild(box);
-}
-
+    
