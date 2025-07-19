@@ -308,3 +308,163 @@ console.log(`Total before tax:$${(2*2095+2*799+499+499)/100}`)
 
 console.log(`Estimated tax(10%):$${Math.round((2*2095+2*799+499+499)*0.1)/100}`)
 */
+
+
+// JAVASCRIPT IS GIVING INSTRUCTION TO A COMPUTER
+// WROTE JAVA SCRIPT CODE
+// RUN OUR CODE USING CONSOLE.LOG
+// Syntax
+// Numbers and Math
+// Order of operations, and Brackets(...)
+// Calculted  the numbers in final project 
+// calculattions using can be inaccurate
+// Math.round()
+// How to search for code on our own
+
+// let num=8;
+// if(num%2===0){
+//   console.log("Even Number")
+// }
+// else{
+//   console.log("Odd number")
+// }
+
+// let num=-4;
+
+// if(num>0){
+//   console.log("positive number")
+// }else if(num<0){
+//   console.log("Negative Number")
+// }else{
+//   console.log("Zero")
+// }
+
+/*
+let age=20;
+if(age>=18){
+  console.log("Eligible to vote")
+}else{
+  console.log("Not eliGible to vote")
+}
+
+let num=16;
+if(num%3===0 && num%5===0){
+  console.log("Divisible by both 3 and 5")
+}else{
+  console.log("Not divisible by both")
+}
+*/
+/*
+let a=7;
+let b=4;
+if(a>b){
+  console.log("a is greater")
+}
+else if(b>a){
+  console.log("b is grater")
+}else{
+  console.log("Both are equal")
+}
+*/
+
+// let a=3,b=9,c=5;
+// if(a>b&&a>c){
+//   console.log("a is greater")
+// }else if(b>c){
+//   console.log("b is greater")
+// }else{
+//   console.log("c is largest")
+// }
+
+
+// let n=22;
+//  if (n%7===0){
+//   console.log(n+" is a multiple of 7")
+//  }else{
+//   console.log(n+ " is not a multiple of 7")
+//  }
+
+
+//  let year=2024;
+//  if((year%4===0&& year%100!==0||(year%400===0))){
+//   console.log(year+"is a leap yea")
+//  }
+//  else{
+//   console.log(year+"is not a leap year")
+//  }
+
+
+// function remainder(n,i){
+//   let n=9;
+//   for(let i=2;i<(n-1);i++){
+//     if((n-(n/i)*i)===0){
+//       console.log('remainder 0')
+//     }else if( )
+//   }
+// }
+
+// let n=9;
+
+// for(let i=2;i<(n-1);i++){
+//   let r=(n-(n/i)*i)
+//   if(r===0){
+//     console.log(r)
+//   }else if(r)
+// }
+
+
+// let num=0;
+// if(num===0){
+//   console.log("Zero")
+// }else if(num%2===0){
+//   console.log("Even number")
+// }else{
+//   console.log("Odd number")
+// }
+
+// let marks=85;
+// if(marks>=90){
+//   console.log("Grade A")
+// }else if(marks>=75){
+//   console.log("Grade B")
+// }else if(marks>=60){
+//   console.log("grade:C")
+// }else if(marks>40){
+//   console.log("Grade D")
+// }else{
+//   console.log("Fail")
+// }
+
+
+// let n=7;
+// if(n>=0 && n<9){
+//   console.log("single-digit number")
+// }else{
+//   console.log("Not a single-digit number")
+// }
+
+// let h=15;
+// if(h<12){
+//   console.log("Good morning")
+// }else if(h<18){
+//   console.log("Good afternoon")
+// }
+// else{
+//   console.log("Good Evening")
+// }
+
+// let age=17;
+// let hasID=true;
+// if(age>=18){
+//   console.log("Allowed")
+// }else if(age===17){
+//   {
+//     if(hasID){
+//       console.log("Allowed with ID")
+//     }else{
+//       console.log("ID required")
+//     }
+//   }else{
+//     console.log("Not alowed")
+//   }
+// }
