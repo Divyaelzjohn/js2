@@ -205,6 +205,9 @@ let obj3=Object.assign({},obj1)*/
 person.greet()*/
 
 
-let obj={};
-obj[10]="ten";
-console.log(obj["10"])
+// let obj={};
+// obj[10]="ten";
+// console.log(obj["10"])
+
+
+
