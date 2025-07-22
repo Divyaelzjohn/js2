@@ -209,5 +209,3 @@ person.greet()*/
 // obj[10]="ten";
 // console.log(obj["10"])
 
-
-
