@@ -10,23 +10,47 @@ import { loadCart } from '../data/cart.js';
 /* async makes a function return a promise 
 -await ->lets us wait for a promise to finish, before going to the next line.
 -lets us write asynchronus code like normal code*/
+/* Why don't we use try/catch everywhere?  -it's meant to handle unexpected error (code is correct , outside our control) */
+/* if we're using Promises, there are 2 ways to manually create an error.
+-If we need to create an error in the future, then we need to use diffrent code.*/
+/* reject() is a function
+-it lets us create an error in the future. */
+
 
 async function loadPage(){
-  console.log('load page');
 
-  await loadProductsFetch();
+  try{
+    // throw 'error1';
+    await loadProductsFetch();
 
-  const value= await new Promise((resolve)=>{
-    loadCart(()=>{
+    const value=await new Promise((resolve, reject)=>{
+      // throw 'error2';
+      loadCart(()=>{
+        // reject('error3')
         resolve('value3')
+      })
     })
-  })
+
+  }catch(error){
+    console.log('Unexpected error. Please try again later.')
+  }
+
+  // console.log('load page');
+
+  // await loadProductsFetch();
+
+  // const value= await new Promise((resolve)=>{
+  //   loadCart(()=>{
+  //       resolve('value3')
+  //   })
+  // })
 
   renderOrderSummary();
   renderPaymentSummary();
 
 }
 loadPage()
+
 
 /*
 Promise.all([

@@ -93,7 +93,3 @@ Instructions Warranty.
 • In data/cart-class.js export the cart object. Replace all uses of import · · data/cart.js with import ... data/cart-class.js
 • Update the code and the tests to make everything work again.
 Hint: in the tests, instead of mocking localStorage.getItem you can just directly set cart.cartItems = [...] */
-
-/* 
-  
-*/
