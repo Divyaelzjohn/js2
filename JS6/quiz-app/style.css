@@ -1,0 +1,27 @@
+body{
+  font-family:Arial;
+  background: #f2f2f2;
+  text-align: center;
+  margin-top: 50px;
+}
+.quiz-container{
+  background: #fff;
+  padding: 30px;
+  width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+.answer-btn{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.answer-btn:hover{
+  background: #ddd;
+}

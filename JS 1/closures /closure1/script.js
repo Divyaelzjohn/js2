@@ -35,7 +35,7 @@ whenever evry time loop runs i is the new variable all together it is new copy o
 
 /*using closure*/
 /*with out using let*/
-/*function x(){
+function x(){
   for(var i=1;i<=5;i++){
     function close(x){
       setTimeout(function(){
@@ -46,7 +46,7 @@ whenever evry time loop runs i is the new variable all together it is new copy o
   }
   console.log("Hello JavaScript")
 }
-x()*/
+x()
 
 /* examples of clousure */
 
@@ -87,7 +87,7 @@ close()*/
 /* the inner function forms a closure with a outside environment and
 not a particular sequence where it is present in the code*/
 
-//what happend swhen var change into let
+//what happends when var change into let
 
 /*function outer(){
   function inner(){
@@ -229,22 +229,22 @@ some times that close over variables are not garbage collector*/
 
 // relation between garbage collector and closure
 
-function a(){
-  var x=0
-  return function b(){
-    console.log(x)
-  }
-}
-var y=a()
-y()
+// function a(){
+//   var x=0
+//   return function b(){
+//     console.log(x)
+//   }
+// }
+// var y=a()
+// y()
 
-/* smart garbage colection mechanism*/
-// example
-function a(){
-  var x=0,z=10                           
-  return function b(){
-    console.log(x)
-  }
-}
-var y=a()
-y()
+// /* smart garbage colection mechanism*/
+// // example
+// function a(){
+//   var x=0,z=10                           
+//   return function b(){
+//     console.log(x)
+//   }
+// }
+// var y=a()
+// y()

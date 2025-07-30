@@ -415,3 +415,13 @@ add()
 The function only runs once. It sets the counter to zero (0) , and return a function expression This is called a closure . it makes it possible  it possible  for  a function to have  "private" variable . 
 */
 
+/* class to create a class 
+always add a methid named constructor()
+
+class className{
+constructor ({..}  class Car{
+constructor(name,year)}
+{
+this.name=name;
+this.year=year
+} */
