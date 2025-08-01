@@ -47,7 +47,7 @@ const cardArray=[
     name: 'hotdog',
     img: 'images/hotdog.png'
   }
-]                                          //array of cards
+]//array of cards
 
 // console.log(codeArray)
 
@@ -61,7 +61,6 @@ const gridDisplay=document.querySelector('#grid')
 const resultDisplay=document.querySelector('#result')
 let cardsChosen=[]              //create card storage 
 let cardsChosenIds=[]
-const cartsWon=[]
 const cardsWon=[]
 
 // console.log(gridDisplay)
@@ -74,7 +73,7 @@ function createBoard(){
     
     card.setAttribute('data-id',i)       //give card number like  0,1,2  we can use this to know which card was clicked
     // console.log(card, i)
-    card.addEventListener('click',flipCart)
+    card.addEventListener('click',flipCard)
     gridDisplay.appendChild(card)        //this adds the card img to the html <div  id="grid">
   }
 }
@@ -86,35 +85,38 @@ function checkMatch(){
   const optionTwoId=cardsChosenIds[1]
 
   console.log('check for match!')
+
+
   if(optionOneId==optionTwoId){
     cards[optionOneId].setAttribute('src','images/blank.png')
     cards[optionTwoId].setAttribute('src','images/blank.png')
     alert('You have clicked the same image')
   }
   
-  if(cardsChosen[0]==cardsChosen[1]){
+  else if(cardsChosen[0]==cardsChosen[1]){
     alert('You found a match!')
     cards[optionOneId].setAttribute('src','images/white.png')
     cards[optionTwoId].setAttribute('src','images/white.png')
-    cards[optionOneId].removeEventListener('click',flipCart)
-    cards[optionTwoId].removeEventListener('click',flipCart)
+    cards[optionOneId].removeEventListener('click',flipCard)
+    cards[optionTwoId].removeEventListener('click',flipCard)
 
-    cartsWon.push(cardsChosen)
+    cardsWon.push(cardsChosen)
   }
   else{
     cards[optionOneId].setAttribute('src','images/blank.png')
     cards[optionTwoId].setAttribute('src','images/blank.png')
     alert('Sorry try again')
   }
+  
   resultDisplay.textContent=cardsWon.length
   cardsChosen=[]
   cardsChosenIds=[]
 
-  if(cardsWon.textContent==cardArray.length/2)
-    resultDisplay.innerHTML='Congratulations You found thhem all'
+  if(cardsWon.length==cardArray.length/2)
+    resultDisplay.textContent='Congratulations You found thhem all'
 }
 
-function flipCart(){
+function flipCard(){
   // console.log(cardArray)
   const cardId=this.getAttribute('data-id')                     // get the number of clicking card
   // console.log(cardArray[cardId].name)        // sets the name of the card clicked
@@ -132,5 +134,3 @@ function flipCart(){
     setTimeout(checkMatch,500)
   }
 }   
-
-// g
