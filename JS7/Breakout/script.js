@@ -2,7 +2,9 @@
 const grid=document.querySelector('.grid')
 const blockWidth=100
 const blockHeight=20
+const ballDiameter=20
 const boardWidth=560
+let timerId;
 
 const userStart=[230,10]
 let currentPosition=userStart
@@ -63,9 +65,15 @@ function drawUser(){
   user.style.bottom=currentPosition[1]+'px'
 }
 
+// draw the ball
+function drawBall(){
+  ball.style.left=currentPosition[0]+'px'
+  ball.style.bottom=ballCurrentPosition[1]+'px'
+}
+
 // move user
 function moveUser(e){
-  switch(e.key){
+  switch(e.key){                 
     case 'ArrowLeft':
       if(currentPosition[0]>0){
         currentPosition[0]-=10
@@ -87,6 +95,24 @@ document.addEventListener('keydown',moveUser)
 // add ball
 const ball=document.createElement('div')
 ball.classList.add('ball')
-ball.style.left=ballCurrentPosition[0]+'px'
-ball.style.right=ballCurrentPosition[1]+'px'
+drawBall()
 grid.appendChild(ball)
+
+// move ball
+function moveBall(){
+  ballCurrentPosition[0]+=2
+  ballCurrentPosition[1]+=2
+  drawBall()
+}
+timerId=setInterval(moveBall,30)
+
+// check fot collosion
+function checkForCollisions(){
+// check for wall collisions
+if(ballCurrentPosition[0]>=(boardWidth-ballDiameter))
+  changeDirection
+}
+
+function changeDirection(){
+  
+}

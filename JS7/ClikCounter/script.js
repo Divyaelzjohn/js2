@@ -15,7 +15,6 @@
 //   document.getElementById("colorCode").textContent="Color: "+randomColor; 
 // }
 
-
 /*
 // stop watch
 let time=0;                                         // set initial time to 0 seconds
@@ -250,8 +249,10 @@ function nextQuestion() {
   if (currentIndex < quizData.length) {
     loadQuestion();
   } else {
-    document.getElementById("quiz-container").innerHTML = `<h3>🎉 Quiz Finished!</h3><p>Your score: ${score}/${quizData.length}</p>`;
+    document.getElementById("quiz-container").innerHTML = `<h3> Quiz Finished!</h3><p>Your score: ${score}/${quizData.length}</p>`;
   }
 }
 
 loadQuestion();
+
+
