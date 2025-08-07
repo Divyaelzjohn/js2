@@ -1,0 +1,18 @@
+body{
+  font-family: sans-serif;
+  padding:20px;
+  max-width: 600px;
+  margin: auto;
+}
+.question-box{
+  border:2px solid #000;
+  padding:20px;
+  border-radius: 10px;
+}
+button{
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
