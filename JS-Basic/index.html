@@ -28,10 +28,51 @@
 <!-- 
   <h2>Quiz App</h2>
   <div id="quiz" class="question-box"></div> -->
-  <button onclick="submitAnswer('A')">Options A</button>
-  <button onclick="submiteAnswer('B')">Option B</button>
+ 
+ 
+  <!-- <h2 id="question"></h2>
+  <button onclick="submitAnswer('A')">Option A</button>
+  <button onclick="submitAnswer('B')">Option B</button>
   <p id="timer"></p>
-  <p id="result"></p>
+  <p id="result"></p> -->
+
+  <!-- simple calculator -->
+   <!-- <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Number 1"/>
+    <input type="number" id="num2" placeholder="Number 2"/> 
+    <br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <button onclick="clearAll()">Clear</button>
+    <p id="result">Result: </p>
+   </div> -->
+
+   <!-- todo -->
+    <!-- <div class="todo-container">
+      <h2>Todo List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task" >
+      <button onclick="addTask()">Add</button>
+
+      <ul id="taskList"></ul>
+    </div> -->
+
+    <div class="todo-container">
+      <h2>Todo List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+      <button onclick="addTask()">Add</button>
+      <button onclick="clearAll()">Clear All</button>
+  
+      <div class="filter-btns">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('done')">Done</button>
+        <button onclick="filterTasks('notdone')">Not Done</button>
+      </div>
+  
+    <ul id="taskList"></ul>
+  
 
   <script src="script.js"></script>
 </body>

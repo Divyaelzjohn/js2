@@ -8,7 +8,7 @@ var- old version. */
 // Javascript data types
 /* variable can store diffrent types of data - called data type
 String - text inside quotes
-number - whole numbers or decimals
+Number - whole numbers or decimals
 Boolean- Yes/No, True/false
 Null   - Empty value
 undefined-Not assignes yet
@@ -558,28 +558,29 @@ function checkAnswer(choice) {
 showQuestion();*/
 
 
-const question = [
+/*const questions = [
   { q: "What is 2 + 2?", answer: "A" },
   { q: "What is capital of India?", answer: "B" }
 ];
 
-let current=0;
+let current = 0;
 let timer;
-let timeLeft=10;
+let timeLeft = 10;
 
 function showQuestion() {
-  document.getElementById("question").innerHTML = question[current].q;
-  document.getElementById("result").innerHTML = " ";
+  document.getElementById("question").innerText = questions[current].q;
+  document.getElementById("result").innerText = "";
   timeLeft = 10;
   updateTimer();
   timer = setInterval(updateTimer, 1000);
 }
+
 function updateTimer() {
   document.getElementById("timer").innerText = `Time left: ${timeLeft}s`;
   timeLeft--;
   if (timeLeft < 0) {
     clearInterval(timer);
-    document.getElementById("result").innerText = "Time's up!";
+    document.getElementById("result").innerText = "Time’s up!";
     nextQuestion();
   }
 }
@@ -588,19 +589,142 @@ function submitAnswer(option) {
   clearInterval(timer);
   if (option === questions[current].answer) {
     document.getElementById("result").innerText = "Correct!";
-  } else{
+  } else {
     document.getElementById("result").innerText = "Wrong!";
   }
-  setTimeout(nextQuestion, 1000 );
+  setTimeout(nextQuestion, 1000);
 }
 
-function nextQuestion(){                                             
+function nextQuestion() {
   current++;
-  if (current < question.length) {
+  if (current < questions.length) {
     showQuestion();
-  }else{
+  } else {
     document.getElementById("question").innerText = "Quiz Finished!";
-    function nextQuestion(){}    document.getElementById("timer").innerxText = " ";
+    document.getElementById("timer").innerText = "";
   }
 }
 
+showQuestion();*/
+
+/* simple calculator */
+/*function calculate(operator){
+  const n1=Number(document.getElementById("num1").value)
+  const n2=Number(document.getElementById("num2").value)
+  let result;
+
+  if(isNaN(n1)||isNaN(n2)){
+    result="Please enter valid numbers!"
+  }else{
+    switch(operator){
+      case '+':result=n1+n2; break;
+      case '-':result=n1-n2; break;
+      case '*':result=n1*n2; break;
+      case '/':result=n2===0?"Can't divide by 0!":n1/n2;yieldbreak;
+    }
+  }
+  document.getElementById("result").innerText=`Result:${result}`
+}
+
+function clearAll(){
+  document.getElementById("num1").value="";
+  document.getElementById("num2").value="";
+  document.getElementById("result").innerText="Result"
+}*/
+
+
+
+// todo-list
+
+
+/*function addTask(){
+  const input=document.getElementById("taskInput");             
+  const task=input.value.trim();
+
+  if(task===""){
+    alert("please enter a task!");
+    return;
+  }
+  const li=document.createElement("li");
+  li.innerHTML=`
+    <span onclick="toggleDone(this)">${task}</span>
+    <button onclick="deleteTask(this)">Delete</button>
+  `;
+  document.getElementById("taskList").appendChild(li);
+  input.value="";
+}
+function deleteTask(btn){
+  btn.parentElement.remove();
+}
+function toggleDone(span){
+  span.classList.toggle("done");
+}*/
+
+
+// save tsaks to LocalStorage,Add a clear all button,add filetr:(All/Done/Not done)
+
+
+
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+function saveToLocalStorage() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function renderTasks(filter = "all") {
+  const ul = document.getElementById("taskList");
+  ul.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    if (
+      filter === "done" && !task.done ||
+      filter === "notdone" && task.done
+    ) return;
+
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span onclick="toggleDone(${index})" class="${task.done ? "done" : ""}">${task.text}</span>
+      <button onclick="deleteTask(${index})">clear</button>
+    `;
+    ul.appendChild(li);
+  });
+}
+
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const text = input.value.trim();
+  if (text === "") {
+    alert("Please enter a task!");
+    return;
+  }
+  tasks.push({ text, done: false });
+  saveToLocalStorage();
+  renderTasks();
+  input.value = "";
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  saveToLocalStorage();
+  renderTasks();
+}
+
+function toggleDone(index) {
+  tasks[index].done = !tasks[index].done;
+  saveToLocalStorage();
+  renderTasks();
+}
+
+function clearAll() {
+  if (confirm("Clear all tasks?")) {
+    tasks = [];
+    saveToLocalStorage();
+    renderTasks();
+  }
+}
+
+function filterTasks(type) {
+  renderTasks(type);
+}
+
+renderTasks();
