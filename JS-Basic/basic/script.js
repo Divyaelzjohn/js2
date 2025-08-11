@@ -311,7 +311,7 @@ console.log(arr); */
 /* let todo = ["Task1", "Task2", "Task3", "Task4"];
 let part = todo.slice(1, 3);   
 todo.splice(2, 1, "New Task"); 
-console.log(part)
+coonsole.log(part)
 console.log(todo) */
 
 /* indexof()->Finds the position(index) of an element in an array , Runs -1 if not found
@@ -328,7 +328,6 @@ console.log(cart.includes("Scale"));*/
 /*let names = ["Divya", "Arun", "Kiran", "Bhavya"];
 names.sort();
 console.log(names); 
-
 names.reverse();
 console.log(names);*/
 
@@ -540,9 +539,579 @@ console.log(longest);
 
 const cart = [
   { name: "Book", price: 300 },
-  { name: "pen", price: 50 },
+  { name: "Pen", price: 50 },
   { name: "Bag", price: 1000 }
 ];
 
 const tot = cart.reduce((sum, item) => sum + item.price, 0);
 console.log(total); // Output: 1350*/
+
+/*
+ const marks = [45, 88, 67, 92, 76];
+    let mark=marks.reduce((sum,marks)=>{
+      return sum+marks
+    },0)
+    console.log("Total: ",total) */
+
+
+/*const cart = [
+  { name: "Book", price: 300, quantity: 2 },
+  { name: "Pen", price: 50, quantity: 4 },
+  { name: "Bag", price: 1000, quantity: 1 }
+];
+const total = cart.reduce((sum, item) => sum+(item.price * item.quantity), 0);
+console.log(`Total cost:1800`);*/
+
+/*const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const basket= fruits.reduce((sum,fruits)=>{
+  // if(fruits in sum){sum[fruits]+=1}else{sum[fruits]=1}return sum
+  sum[fruits]=(sum[fruits]||0)+1;return sum;
+},{});console.log(basket)*/
+
+/* map keeps insertion order(useful for displaying in the same order). Can have keys of any type(objects, numbers, booleans... not just strings). Built-in .size property to get numbers of entries(instead of Object.keys().length) */
+
+// const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+// const basket = fruits.reduce((map, fruit) => {
+//   /* get current count or 0 if it doesn't exist yet */
+//  const currentCount=map.get(fruit) || 0;
+//   /* update the count */
+//   map.set(fruit, currentCount + 1);
+//   return map;                                     //pass amp  to next loop
+// }, new Map());
+// console.log(basket);
+
+/*let basket = new Map();                         // this create an empty map*/
+/*basket.set("apple", 3);                         // .set(key,value) _> stores key="apple",value=3 */
+/*basket.get("apple"); // 3                       //.get(key)-> retrives the value for that key*/
+/*basket.has("apple"); // true                    //.has(key)->checks if key exists*/
+
+
+
+
+
+
+
+
+/* what is an Object- an object is a collection of key-value pairs that store related data and behavior *//*
+const user = {
+  name: "Divya",
+  age: 25,
+  isAdmin: true
+};*/
+/* accessing values */
+/*console.log(user.name);     // Dot notation
+console.log(user["age"]);   // Bracket notation
+// adding/updating/Deleting
+user.email="divya@example.com"
+user.age = 20;                    // Update
+delete user.isAdmin;              // Delete
+
+// Looping through an object
+for (let key in user) {
+  console.log(key, user[key]);
+}
+// Methods inside objects -Objects can store functions as values-> called methods
+const user = {
+  name: "Divya",
+  greet: function() {
+    console.log(`Hello, I am ${this.name}`);
+  }
+};
+
+user.greet();
+
+// Nested objects
+const company = {
+  name: "TechCorp",
+  address: {
+    city: "Bangalore",
+    pincode: 560001
+  }
+};
+
+console.log(company.address.city); // "Bangalore"
+*/
+
+
+/*const car = {
+  name: "Toyota",
+  model: "Camry",
+  year: 2022,
+  getDetails(){
+    console.log(`${this.name} ${this.model} ${this.year}`)
+  }
+};
+car.getDetails()
+console.log(car.year=2024)
+for(let key in car){
+  console.log(key,car[key])
+}*/
+
+/*
+function showDetails() {
+  console.log(`${this.name} ${this.model} (${this.year})`);
+}
+const car1 = { name: "Toyota", model: "Camry", year: 2022, getDetails: showDetails };
+const car2 = { name: "Honda", model: "Civic", year: 2023, getDetails: showDetails };
+car1.getDetails(); // Toyota Camry (2022)
+car2.getDetails(); // Honda Civic (2023)
+
+// Same method works for multiple objects because of this.
+*/
+
+
+/*const student = {
+  name: "Don",
+  marks: [80,75,85],
+  addMark:function(mark){this.marks.push(mark)},
+  getAverage:function(){
+    let sum=0;                                   
+    for(let i=0;i<this.marks.length;i++){
+      sum+=this.marks[i];
+    }return sum/this.marks.length;
+  }
+};
+// console.log("Average marks:", student.getAverage());
+console.log(student.addMark(95))
+// console.log("Average marks after adding:", student.getAverage());*/
+
+/*const students = [
+  {
+    name: "Divya",
+    marks: [80, 75, 85],
+    getAverage: function() {
+      let sum = 0;
+      for (let mark of this.marks) {
+        sum += mark;
+      }
+      return sum / this.marks.length;
+    }
+  },
+  {
+    name: "Rahul",
+    marks: [90, 88, 95],
+    getAverage: function() {
+      let sum = 0;
+      for (let mark of this.marks) {
+        sum += mark;
+      }
+      return sum / this.marks.length;
+    }
+  },
+  {
+    name: "Priya",
+    marks: [70, 68, 75],
+    getAverage: function() {
+      let sum = 0;
+      for (let mark of this.marks) {
+        sum += mark;
+      }
+      return sum / this.marks.length;
+    }
+  }
+];
+let topper = students[0];                                   // we assume th efirst student in the array is the topper for now. 
+for (let student of students) {
+  if (student.getAverage() > topper.getAverage()) {         //for each student we calculate their average using the getAverage() method, we compare it to current topper's average.if the current student average is greater they are the new topper
+    topper = student;
+  }
+}
+console.log(`Topper is ${topper.name} with average marks ${topper.getAverage()}`);*/
+
+/*let bestSeller = products[0];
+for (let product of products) {
+  if (product.sales > bestSeller.sales) {
+    bestSeller = product;
+  }
+}
+console.log(`Bestseller: ${bestSeller.name}`);*/
+
+
+
+// Object Destructuring and methods
+
+/*const user = { name: "Divya", age: 25, city: "Chennai" };    //basic object destructuring
+
+const { name, age } = user;
+
+console.log(name, age);*/
+
+/*const { name: userName, city: homeCity } = user;              //renaming variable while destructuring
+console.log(userName, homeCity);
+const { country = "India" } = user;                           //Default values
+console.log(country);
+function displayUser({ name, age }) {                         //destructuring in function paramrters
+  console.log(`${name} is ${age} years old`);
+}
+displayUser(user);*/
+
+/*
+const car = {                                               //adding method to an object
+  brand: "Toyota",
+  year: 2022,
+  getInfo() {
+    return `${this.brand} - ${this.year}`;
+  }
+};
+console.log(car.getInfo()); */
+
+/*const student={
+    name: "Priya",
+    marks: [70, 68, 75],
+    getAverage: function() {
+      let sum = 0;
+      for (let mark of this.marks) {
+        sum += mark;
+      }
+      return sum / this.marks.length;
+    }
+}
+const{name,getAverage}=student;
+console.log(`student name: ${student.name}`);
+console.log(`average marks:${student.getAverage()}`);*/
+
+/*const students = [
+  {
+    name: "Priya",
+    marks: [70, 68, 75],
+    getAverage: function() {
+      return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;
+    }
+  },
+  {
+    name: "Rahul",
+    marks: [80, 90, 85],
+    getAverage: function() {
+      return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;
+    }
+  }
+];
+for (let student of students) {
+  console.log(`${student.name} - Average: ${student.getAverage()}`);
+}*/
+
+
+// Object Destructuring
+/*const user = { name: "Divya", age: 25, city: "Chennai" };
+let name = user.name;
+let age = user.age;
+console.log(name, age);*/
+
+/*const user = { name: "Divya", age: 25, city: "Chennai" };
+const { name, age } = user;
+console.log(name, age);*/
+
+// Destructuring in a function
+/*function displayUser({ name, city}) {      
+  console.log(`User: ${name} from ${city}`);
+}
+const user = { name: "Divya", age: 25, city: "Kerala" };
+displayUser(user);*/
+
+//Method inside objects
+/*const student = {
+  name: "Priya",
+  marks: [70, 68, 75],
+  getAverage() {
+    return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;  
+  }
+};
+const { name, getAverage } = student;
+console.log(`${name} - Average:${getAverage.call(student)}`);*/
+
+
+/*const students ={
+    name: "Priya",
+    marks: [70,68,75],
+    getAverage: function(){
+      return this.marks.reduce((sum,m)=>sum+m,0)/this.marks.length;
+    },
+    getGrade:function(){
+      const avg=this.getAverage();
+      if(avg>=90){ return "A";}
+      else if(avg>=75){ return "B";}
+      else if(avg>=50){ return "C"}
+      else {return "F"}
+    }
+  }
+const { name, getAverage, getGrade } = students;
+const avg = students.getAverage();
+const grade = students.getGrade();
+console.log(`student - ${name}`);
+// console.log(`Average:${getAverage.call(students)}`)
+// console.log(`Grade:${getGrade.call(students)}`)
+console.log(`Average:${avg}`)        //using this we don't want to use call 
+console.log(`Grade:${grade}`)*/
+
+/*const students = [
+  {
+    name: "Priya",
+    marks: [70, 68, 75],
+    getAverage: function() {
+      return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;
+    },
+    getGrade: function() {
+      const avg = this.getAverage();
+      if (avg >= 90) return "A";
+      else if (avg >= 75) return "B";
+      else if (avg >= 50) return "C";
+      else return "F";
+    }
+  },
+  {
+    name: "Rahul",
+    marks: [85, 90, 88],
+    getAverage: function() {
+      return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;
+    },
+    getGrade: function() {
+      const avg = this.getAverage();
+      if (avg >= 90) return "A";
+      else if (avg >= 75) return "B";
+      else if (avg >= 50) return "C";
+      else return "F";
+    }
+  },
+  {
+    name: "Kiran",
+    marks: [45, 55, 50],
+    getAverage: function() {
+      return this.marks.reduce((sum, m) => sum + m, 0) / this.marks.length;
+    },
+    getGrade: function() {
+      const avg = this.getAverage();
+      if (avg >= 90) return "A";
+      else if (avg >= 75) return "B";
+      else if (avg >= 50) return "C";
+      else return "F";
+    }
+  }
+];
+console.log("student Report Card:");
+// students.forEach(s => {
+//   console.log(`${s.name} - Average: ${s.getAverage()} - Grade: ${s.getGrade()}`);
+// });
+
+// students.forEach(({name,getAverage,getGrade}) => {
+//   console.log(`${name} - Average: ${getAverage.call(students.find(s => s.name === name))} - Grade: ${getGrade.call(students.find(s => s.name === name))}`);
+// });
+
+students.forEach(({name,marks,getAverage,getGrade}) => {
+    console.log(`${name} - Average: ${getAverage(marks)} - Grade: ${s.getGrade(marks)}`);
+  });
+
+// let topper = students[0];
+// for (let student of students) {
+//   if (student.getAverage() > topper.getAverage()) {
+//     topper = student;
+//   }
+// }
+let topper=students.reduce((best,current)=>current.getAverage()>best.getAverage()?current:best)
+const { name: topperName, getAverage: topperAvg, getGrade: topperGrade } = topper;
+console.log(`Topper: ${topper.name} with Average ${topper.getAverage()} & Grade ${topper.getGrade()}`);*/
+
+/*const students = [
+  { name: "Priya", marks: [70, 68, 75] },
+  { name: "Rahul", marks: [85, 90, 88] },
+  { name: "Kiran", marks: [45, 55, 50] }
+];
+const getAverage = marks => marks.reduce((sum, m) => sum + m, 0) / marks.length;
+const getGrade = marks => {
+  const avg = getAverage(marks);
+  if (avg >= 90) return "A";
+  else if (avg >= 75) return "B";
+  else if (avg >= 50) return "C";
+  else return "F";
+};
+console.log("Student Report Card:");
+students.forEach(({ name, marks }) =>
+  console.log(`${name} - Average: ${getAverage(marks)} - Grade: ${getGrade(marks)}`)
+);
+let topper=students.reduce((best,current)=>getAverage(current.marks)>getAverage(best.marks)?current:best)
+console.log(`Topper: ${topper.name} with Average ${getAverage(topper.marks)} & Grade ${getGrade(topper.marks)}`);
+*/
+
+
+
+// Sorting students by average marks- we can use the sort() method on arrays. It compares two items at a time and decides their order.
+
+/*const students = [
+  { name: "Priya", marks: [70, 68, 75] },
+  { name: "Rahul", marks: [85, 90, 88] },
+  { name: "Kiran", marks: [45, 55, 50] }
+];*/
+// function getAverage(marks) {
+//   return marks.reduce((sum, m) => sum + m, 0) / marks.length;
+// }
+/*students.sort((a,b)=>getAverage(b.marks)-getAverage(a.marks));  
+console.log(students)
+const topper = students[0];
+console.log("Sorted by Average:");
+students.forEach(s => {
+  console.log(`${s.name} - Avg: ${getAverage(s.marks)}`);
+});*/
+/*const getAverage = marks => marks.reduce((sum, m) => sum + m, 0) / marks.length;
+students.sort(({marks:m1},{marks:m2})=>getAverage(m2)-getAverage(m1))  
+console.log("Sorted by Average:");
+students.forEach(({ name, marks }) => {
+  console.log(`${name} - Avg: ${getAverage(marks)}`);
+});
+const { name: topperName, marks: topperMarks } = students[0];
+console.log(`Topper: ${topperName} - Avg: ${getAverage(topperMarks)}`);*/
+
+/*const getAverage = m => m.reduce((sum, x) => sum + x, 0) / m.length;
+const topper = students.reduce((best, curr) =>
+  getAverage(curr.marks) > getAverage(best.marks) ? curr : best
+);
+console.log(`Topper: ${topper.name} - Avg: ${getAverage(topper.marks)}`);*/
+
+/*let topper = students.reduce((best, current) => {
+  const bestAvg = best.getAverage();
+  const currAvg = current.getAverage();
+  return currAvg > bestAvg ? current : best;
+});*/
+
+
+
+
+//this keyword - a function stored as a property inside an object.it allows the object to perform actions or calculatiote values using it's own data
+/*const user = {
+  name: "Divya",
+  age: 25,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+user.greet();  */
+
+
+// const calculator = {
+//   a: 5,
+//   b: 3,
+//   sum() {
+//     return this.a + this.b;
+//   },
+//   multiply(){
+//     return this.a * this.b;
+//   }
+// }
+// console.log(calculator.sum()); 
+// console.log(calculator.multiply()); 
+
+
+//shorthand method syntax
+// const obj = {                             //const obj={
+//   greet: function() {                     //  greet(){
+//     console.log("Hello");                 // console.log("Hello")
+//   }
+// };                                       // in this method we can write like this
+
+//arrow function
+/*const obj = {
+  name: "Divya",
+  greet: () => {
+    console.log(this.name);
+  }
+};
+obj.greet();*/
+
+
+//Object iteration in js
+
+//1.using for...in loop - loops over all enumerable properties of an object
+/*const user = {
+  name: "Divya",
+  age: 25,
+  city: "Bangalore"
+};
+for (let key in user) {
+  console.log(key, ":", user[key]);
+}*/
+
+// 2. Using Object.entries() - Return an array of keys, which you can loop over with .forEach() or for...of  
+/*Object.keys(user).forEach(key => {
+  console.log(key, ":", user[key]);
+});*/
+
+//3.using Object.entries()
+/*for (const [key, value] of Object.entries(user)) {
+  console.log(key, ":", value);
+}*/
+
+/*const book={
+  title: "The Alchemist",
+  author: "Paulo Coelho", 
+  year: 1988
+}
+for (let key in book){
+  console.log(key, ":", book[key]);
+}
+const keys = Object.keys(book);
+keys.forEach(key => {
+  console.log(key, ":", book[key]);
+});
+for (const [key, value] of Object.entries(book)) {
+  console.log(key, ":", value);
+}*/
+
+/* usecase 
+1.display data dynamically
+const userProfile = {
+  name: "Divya",
+  email: "divya@example.com",
+  age: 25
+};
+for(const[key,value] of Object.entries(userProfile)){console.log(`${key}:${value}`)}
+
+2.form handling &validation
+const formData = {
+  username: "divya_dev",
+  password: "12345",
+  email: "divya@example.com"
+};
+Object.keys(formData).forEach(field=>{if(!formData[field]){console.log(`${field} is required`)}})
+
+3.Filtering or Transforming Objects 
+const settings = {
+  darkMode: true,
+  notifications: false,
+  autoSave: true
+};
+const enabledSetting = Object.fromEntries(
+  Object.entries(settings).filter(([key, value]) => value)
+);
+console.log(enabledSettings); 
+
+4.Converting Object to arrays -many array methods like .map().filter() don't work directly on objects, so you convert the object to an array of entries or keys first
+const scores = {
+  Alice: 90,
+  Bob: 75,
+  Carol: 85
+};
+
+const scoreArray = Object.entries(scores);
+scoreArray.forEach(([name, score]) => {
+  console.log(`${name} scored ${score}`);
+});
+
+5.Debugging & Logging -> quickly inspect all keys and values inside an object dynamically without manually typing property names
+*/
+
+const user = {
+  name: "Divya",
+  age: 25,
+  email: "divya@example.com",
+  city: "Bangalore"
+};
+function displayUserInfo(userObj){
+  for(const[key,value] of Object.entries(userObj)){
+    console.log(`${key}:${value}`)
+  }
+}
+displayUserInfo(user)
+
+function listUserProperties(userObj){
+ const keys=Object.keys(userObj);
+    console.log("User properties:",keys.join(", "))
+  }
+listUserProperties(user)
