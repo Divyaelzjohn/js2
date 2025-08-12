@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h2>Products</h2>
+  <button onclick="addToCart('Apple')">Add Apple</button>
+  <button onclick="addToCart('Banana')">Add Banana</button>
+  <button onclick="addToCart('Orange')">Add Orange</button>
+
+  <h2>Your Cart</h2>
+  <ul id="cartList"></ul>
+  <button onclick="clearCart()">Clear Cart</button>
+
+  <script>
+    // Load cart from localStorage (or empty array if nothing saved)
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Display cart when page loads
+    displayCart();
+
+    function addToCart(item) {
+      cart.push(item); // Add item to array
+      localStorage.setItem("cart", JSON.stringify(cart)); // Save to localStorage
+      displayCart(); // Refresh UI
+    }
+
+    function displayCart() {
+      const cartList = document.getElementById("cartList");
+      cartList.innerHTML = ""; // Clear old items
+      cart.forEach((item, index) => {
+        cartList.innerHTML += `<li>${item} <button onclick="removeItem(${index})">Remove</button></li>`;
+      });
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1); // Remove item from array
+      localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
+      displayCart();
+    }
+
+    function clearCart() {
+      cart = []; // Empty cart array
+      localStorage.removeItem("cart"); // Remove from localStorage
+      displayCart();
+    }
+    /*
+    localStorage.setItem()->saves the cart array as a JSON string
+    localStorage.getItem()->Reads the saved cart on page load
+    JSON.stringify->Converts array to string before saving
+    JSON.parse()->converts string back to array when readingy
+    */
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- <ul id="fruitsList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul> -->
+
+  <!-- <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addBtn">Add Task</button>
+  <ul id="taskList"></ul> -->
+
+  <!-- <button class="add-to-cart">Add to cart</button>
+  <p id="cartCount">Cart:0 items</p> -->
+
+  <!-- <input type="text" id="commentInput" placeholder="write a comment">
+  <button id="postComment">Post</button>
+  <div id="commentList"></div> -->
+
+  <!-- <button id="notifyBtn">Show notification</button>
+  <div id="notification" style="display:none; background:lightgreen; padding:10px;">
+    New offer available!
+  </div> -->
+
+  <!-- <h2>Comment Section</h2>
+  <textarea id="comment-input" placeholder="Write a comment..."></textarea>
+  <br>
+  <button id="post-btn">Post Comment</button>
+  <h3>All Comments:</h3>
+  <div id="comment-list"></div> -->
+
+  <!-- <div>
+    <h2>Products</h2>
+    <div class="product">
+      <span>Apple - 50</span>
+      <button class="add-to-cart" data-name="Apple" data-price="50">Add to cart</button>
+    </div>
+    <div class="product">
+      <span>Apple - 20</span>
+      <button class="add-to-cart" data-name="Apple" data-price="50">Add to cart</button>
+    </div>
+    <div class="product">
+      <span>Apple - 30</span>
+      <button class="add-to-cart" data-name="Apple" data-price="50">Add to cart</button>
+    </div>
+  </div>
+  <h2>Cart</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="total">0</span></p> -->
+
+
+
+  <h2>Products</h2>
+  <button onclick="addToCart('Apple')">Add Apple</button>
+  <button onclick="addToCart('Banana')">Add Banana</button>
+  <button onclick="addToCart('Orange')">Add Orange</button>
+
+  <h2>Your Cart</h2>
+  <ul id="cartList"></ul>
+  <button onclick="clearCart()">Clear Cart</button>
+
+  <script src="script.js">
+    // Event Delegation -> Instead of adding event listeners to every child element, you add one listener to their parent . When a child is clicked, the event bubbles up to the parent, which handles it . Save memory and improve performance, useful when child elements are added or removed dynamically
+    //Usecase -> 
+    // Dynamic To-Do List -> Imagine a to-do app where users can add or remove taasks anytime. Instead of attaching a click listener to each task's delete button individually(which would need updating when tasks change),You attach one listenr to the container holding all tasks.
+    //Interactive menus-> In a website navigation menu with many items add-items(some loaded dynamically), you can attach one click listener on the whole menu container. When users click any menu item, the listener handles highlighting or expanding the submenu.
+    // ChatApps->messages are loaded continously. Instead of adding click listeners to each message bubble(which can be hundreds), You add one listenr to the chat container. When a message is clicked(e.g. to react or reply), The listener process it
+    // Tables with Rows- In an admin paanel, tables often have rows generateed dynamically from database data. If clicking a row should show details or oprions, event delegation lets you manage all rows with a single listener on the table body.
+
+    /*const list=document.getElementById("fruitsList");
+    list.addEventListener("click",(event)=>{
+      if(event.target.tagName==="LI"){
+        alert("You clicked: "+event.target.textContent)
+      }
+    })*/
+   /* const addBtn = document.getElementById("addBtn");
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    addBtn.addEventListener("click", () => {
+    const taskText = taskInput.value.trim();
+    if (taskText === "") {
+        alert("Please enter a task!");
+        return;
+    }
+    // Create li
+    const li = document.createElement("li");
+    li.textContent = taskText;
+    // Mark as done on click
+    li.addEventListener("click", () => {
+        li.style.textDecoration = "line-through";
+    });
+    // Delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.style.marginLeft = "10px";
+    deleteBtn.addEventListener("click", () => {
+        li.remove();
+    });
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+    taskInput.value = "";
+}); */
+
+// why this good usecase:
+// Event handling -click event for adding tasks, click event for marking as done ,clcik event for deleting tasks
+// DOM Manipusltion:ateElemnt() to add new list items, appendchild() to add elements inside, .remove() to do delete
+// Real-world()-> similar used in shopping carts,comment systems, notifications, etc
+  
+  // shopping cart
+  /*let cartCount = 0;
+  const addBtn = document.querySelector(".add-to-cart");
+  const cartDisplay = document.getElementById("cartCount");
+
+  addBtn.addEventListener("click", () => {
+    cartCount++;
+    cartDisplay.textContent = `Cart: ${cartCount} items`;
+  });*/
+
+  // Comment System
+  /*const commentInput = document.getElementById("commentInput");
+  const postBtn = document.getElementById("postComment");
+  const commentList = document.getElementById("commentList");
+
+  postBtn.addEventListener("click", () => {
+    if (commentInput.value.trim() === "") return; // ignore empty comments
+    const newComment = document.createElement("p");
+    newComment.textContent = commentInput.value;
+    commentList.appendChild(newComment);
+    commentInput.value = ""; 
+  });*/
+
+    // Notifications-show & Hide
+    /*const notifyBtn = document.getElementById("notifyBtn");
+    const notifications = document.getElementById("notification");
+
+    notifyBtn.addEventListener("click", () => {
+      notification.style.display = "block";
+
+      setTimeout(() => {
+        notification.style.display = "none";
+      }, 2000); // hide after 2 seconds
+    });*/
+
+    /*const postBtn = document.getElementById("post-btn");
+    const commentInput = document.getElementById("comment-input");
+    const commentList = document.getElementById("comment-list");
+
+    postBtn.addEventListener("click", () => {
+      const commentText = commentInput.value.trim();
+
+      if (commentText === "") {
+        alert("Please write a comment before posting!");
+        return;
+      }
+
+      // Create a comment container div
+      const commentDiv = document.createElement("div");
+      commentDiv.style.dispaly = "flex";
+      commentDiv.style.alignItems = "center";
+      commentDiv.style.marginBottom = "8px";
+
+      // Create comment text
+      const commentPara = document.createElement("p");
+      commentPara.textContent = commentText;
+      commentPara.style.marginRight = "10px";
+
+      // Create delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.style.backgroundColor = "red";
+      deleteBtn.style.color = "white";
+      deleteBtn.style.border = "none";
+      deleteBtn.style.padding = "4px 8px";
+      deleteBtn.style.cursor = "pointer";
+
+      // Delete button click event
+      deleteBtn.addEventListener("click", () => {
+        commentDiv.remove();
+      });
+
+      // Add text and button to comment div
+      commentDiv.appendChild(commentPara);
+      commentDiv.appendChild(deleteBtn);
+
+      // Add comment to the list
+      commentList.appendChild(commentDiv);
+
+      // Clear input 
+      commentInput.value = "";
+    });*/
+
+   /* const cartItems=document.getElementById("cart-items");
+    const totalDisplay=document.getElementById("total")
+    let total=0;
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+    let name = button.dataset.name;
+    let price = parseInt(button.dataset.price);
+
+    // Add item to cart list
+    let li = document.createElement("li");
+    li.textContent = `${name} - ₹${price}`;
+    cartItems.appendChild(li);
+
+    // Update total
+    total += price;
+    totalDisplay.textContent = total;
+    })
+  })*/
+  </script>
+</body>
+</html>

@@ -45,7 +45,7 @@ console.log("Final Ticket Price: ₹" + finalPrice);*/
 
 /* Loops -> You repeat a block of code multiple times - useful when working with arrays, repeating tasks, showing product lists,quiz questions, etc.   */
 
-/* for loop-> for(let i=0;i<5;i++){ocnsle.log("Count: ",i)} projects examples:Quiz App-Loop through an array of questions, Shopping Cart-calculate total form a list of prices ,invoice Genrator- Print serial numbers
+/* for loop-> for(let i=0;i<5;i++){console.log("Count: ",i)} projects examples:Quiz App-Loop through an array of questions, Shopping Cart-calculate total form a list of prices ,invoice Genrator- Print serial numbers
 let prices = [200, 150, 300];
 let total = 0;
 for (let i = 0; i < prices.length; i++) {
@@ -64,7 +64,7 @@ while (password !== "admin") {
 console.log("Access granted in", attempts, "attempts.");
 */
 
-/* do...while -> let i=0;do{console.log("Do While Loop: ",i);i++;}while(i<5) always rind at lest once : projrct examples:menu-Based Game or App- Show menu at least once,survey Form-ask questions until user quits;
+/* do...while -> let i=0;do{console.log("Do While Loop: ",i);i++;}while(i<5) always rind at least once : project examples:menu-Based Game or App- Show menu at least once,survey Form-ask questions until user quits;
 let again;
 do {
   let num = prompt("Enter a number");
@@ -113,15 +113,12 @@ let playAgain;
 do {
   let score=0;
   let i=0;
-
   while(i<questions.length){
     const q=questions[i];
     console.log(`Q${i + 1}: ${q.question}`);
-
     for(let opt of q.options){
       console.log("-"+opt)
     }
-
     const userAnswer=prompt(`Your answer ofr Q${i+1}:`)
     if(userAnswer===q.answer){
       alert("Correct!")
@@ -129,7 +126,6 @@ do {
     }else {
       alert("Wrong! Correct answer: "+q.answer)
     }
-
     i++;
   }
   const result = {
@@ -142,7 +138,6 @@ do {
   for(let key in result){
     console.log(`${key}:${result[key]}`);
   }
-
   playAgain=confirm("Do you want to try the quiz again?");
 }while(playAgain)*/
 
@@ -437,7 +432,7 @@ const profile = {
 const { username, level } = profile;
 console.log(`user ${username}, your email is ${level}`);*/
 
-/* Spread operator: the spread operator(...) expands arrays or objects into individual elements */
+/* Spread operator: the spread operator(...) expands arrays or objects into individual elemnts */
 /*let nums = [1,2,3];
 console.log(...nums);
 let fruits = ["apple", "banana"];
@@ -568,7 +563,7 @@ const basket= fruits.reduce((sum,fruits)=>{
   sum[fruits]=(sum[fruits]||0)+1;return sum;
 },{});console.log(basket)*/
 
-/* map keeps insertion order(useful for displaying in the same order). Can have keys of any type(objects, numbers, booleans... not just strings). Built-in .size property to get numbers of entries(instead of Object.keys().length) */
+/* map keeps insertion order(useful for displaying in the same order). Can have keys of any type(objects, numbers, boolean... not just strings). Built-in .size property to get numbers of entries(instead of Object.keys().length) */
 
 // const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
 // const basket = fruits.reduce((map, fruit) => {
@@ -592,13 +587,13 @@ const basket= fruits.reduce((sum,fruits)=>{
 
 
 
-/* what is an Object- an object is a collection of key-value pairs that store related data and behavior *//*
+/* What is an Object- an object is a collection of key-value pairs that store related data and behavior *//*
 const user = {
   name: "Divya",
   age: 25,
   isAdmin: true
 };*/
-/* accessing values */
+/* accesing values */
 /*console.log(user.name);     // Dot notation
 console.log(user["age"]);   // Bracket notation
 // adding/updating/Deleting
@@ -610,7 +605,7 @@ delete user.isAdmin;              // Delete
 for (let key in user) {
   console.log(key, user[key]);
 }
-// Methods inside objects -Objects can store functions as values-> called methods
+// Methods inside objects -Objects can store function as values-> called methods
 const user = {
   name: "Divya",
   greet: function() {

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>change back ground color</title>
+</head>
+<body>
+  <button id="colorBtn">Change background</button>
+  <script>
+    const btn = document.getElementById("colorBtn");
+    btn.addEventListener("click", () => {
+      const r = Math.floor(Math.random() * 256); 
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+  </script>
+</body>
+</html>
