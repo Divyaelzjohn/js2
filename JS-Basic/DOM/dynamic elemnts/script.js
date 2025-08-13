@@ -171,41 +171,34 @@ function login(username) {
 login("Divya");*/
 
 
-document.getElementById('loginBtn').addEventListener('click', () => {
+/*document.getElementById('loginBtn').addEventListener('click', () => {
   const username = document.getElementById('username').value.trim();
   if (!username) return alert("Enter username");
-  
   document.dispatchEvent(new CustomEvent('userLoggedIn', {
     detail: { username }
   }));
 });
-
 document.addEventListener('userLoggedIn', (e) => {
   document.getElementById('welcomeMsg').textContent = `Welcome, ${e.detail.username}!`;
 });
-
 // Shopping Cart Event
 function addToCart(item) {
   document.dispatchEvent(new CustomEvent('cartUpdated', { detail: { item } }));
 }
-
 document.getElementById('addLaptop').addEventListener('click', () => addToCart('Laptop'));
 document.getElementById('addPhone').addEventListener('click', () => addToCart('Phone'));
-
 document.addEventListener('cartUpdated', (e) => {
   const div = document.getElementById('cartStatus');
   div.textContent = `Added to cart: ${e.detail.item}`;
 });
-
 // Quiz Game Event
 let currentQuestion = 1;
 document.getElementById('finishQ').addEventListener('click', () => {
   document.dispatchEvent(new CustomEvent('nextQuestion', { detail: { questionNumber: currentQuestion + 1 } }));
 });
-
 document.addEventListener('nextQuestion', (e) => {
   currentQuestion = e.detail.questionNumber;
   document.getElementById('question').textContent = `Question ${currentQuestion}: What is ${currentQuestion} + ${currentQuestion}?`;
-});
+});*/
 
 
