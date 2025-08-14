@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Basics</title>
+  <style>
+    body{font-family: Arial;background:#f4f4f4;padding:20px;}
+    h1{text-align: center;}
+    input,button{padding:10px;margin:5px;}
+    ul{list-style: none; padding: 0;}
+    li{background: white;padding: 8px;margin: 5ox 0;display: flex;justify-content: space-between;}
+    .done{text-decoration: line-through; color: gray;}
+  </style>
+</head>
+<body>
+  <!-- <div class="atm-box">
+    <h2>Simple ATM</h2>
+    <div id="loginSection">
+      <input type="number" id="pinInput" placeholder="Enter PIN">
+      <br>
+      <button onclick="checkPIN()">Login</button>
+       <p id="attempts"></p>
+    </div>
+
+    <div id="menuSection" style="display:none;">
+      <button onclick="checkBalance()">Check Balance</button>
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+      <button onclick="exitATM()">Exit</button>
+    </div>
+
+    <div id="output"></div>
+  </div> -->
+
+  <!-- <h1>Todo App</h1>
+  <input id="taskInput" type="text" placeholder="Eneter task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+   -->
+  <h1>Todo App</h1>
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script src="script.js">
+    function createTodoApp(){
+      let tasks=loadFromStorage();
+
+      function saveToStorage(){
+        localStorage.setItem("tasks",JSON.stringify(tasks));
+      }
+      function loadfromStorage(){
+        return JSON.parse(localStoorage.getItem("tasks"))||[]
+      }
+      function listTasks(){
+        const ul=document.getElementById("taskList")
+        ul.innerHTML="";
+        tasks.forEach((task,index)=>{
+          const li=document.createElement("li")
+          li.innerHTML=`
+            <span class="${task.done?'done':''}">${task.text}</span>
+            <div>
+              <button onclick="markDone(${index})">Done</button>  
+              <button onclick="markDone(${index})">Delete</button>  
+            </div>
+          `;ul.appendChild(li);
+        })
+        saveToStorage()
+      }
+      const add=function(taskText="Untitled Task"){
+        tasks.push({text:taskText,done:false});
+        listTasks();
+      }
+      const mark=(index)=>{
+        tasks[index].done=!tasks[index].done;
+        listTasks();
+      }
+      const del=(index)=>{
+        tasks.splice(index,1);
+        listTasks();
+      }
+      const addMultiple=(...taskArray)=>{
+        taskArray.forEach(task=>tasks.push({text:task,done:false}))
+        listTasks()
+      }
+      return{add,mark,del,listTasks,addMultiple}
+    }
+    const myTodo=createTodoApp();
+    function addTask(){
+      const  myTodo=createTodoApp()
+
+      function addTask(){
+        const input=document.getElementById("taskInput");myTodo.add(input.value);input.value="";
+      }function markDone(index){
+        myTodo.mark(index);
+      }function deletetask(index){
+        myTodo.del(index)
+      } window.onload=function(){
+        myTodo.listTasks()
+      }
+    }
+
+  </script>
+</body>
+</html>
