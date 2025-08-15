@@ -19,7 +19,7 @@ downloadFile("movie.mp4",()=>{
 })
 
 download  
-.then(message=>console.log(message))
+.then(message=>consol.log(message))
 .catch(error=>console.log(error))*/
 
 /*function downloadFile(){
@@ -33,4 +33,5 @@ async function proocessdownloaded(){
   console.log(message)
   console.log("Processing file...")
 }*/
+
 
