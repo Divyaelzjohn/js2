@@ -516,7 +516,7 @@ window.addEventListener("resize", function() {
 
 // Mouse Tracker
 window.addEventListener("mousemove", function(e) {
-  document.getElementById("mousePos").textContent =
+  document97.getElementById("mousePos").textContent =
     `X: ${e.clientX} | Y: ${e.clientY}`;
 });
 

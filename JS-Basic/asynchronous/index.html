@@ -3,12 +3,38 @@
 <head>
   <title>Document</title>
 </head>
-  <!-- Callback->A callback is a function passsed as an argument to another function , to be executed later(usefully after some task finishes) -->
-  <!-- Promise ->a promise represents a value that may be available now,later, or never.
-    -pending(waiting)
-    -fulfilled(successs),
-    -rejected(error) -->
-  <!-- Async/Await ->A cleaner way to work with promises using async and await  -->
+<link rel="stylesheet" href="style.css">
+<body>
+  <!-- <h2>Food Ordering Simulation</h2>
+  <button onclick="startOrder()">Order Food</button>
+  <button onclick="orderWithPromise()">Order Food</button>
+  <button onclick="orderWithAsyncAwait()">Order Food</button>
+  <button onclick="showCookingProgress()">Order Food</button> -->
+
+  <!-- <h2>Foos ordering</h2> -->
+  <!-- <button onclick="orderFoodPromise()">order Pizza</button> -->
+  <!-- <button onclick="cookFood()">order Pizza</button> -->
+  <!-- <button onclick="checkOrders()">check</button> -->
+
+  <!-- <h1>Restaurant Order Tracker</h1>
+  <button onclick="startOrder()">Place Order</button>
+  <ul id="orderStatus"></ul> -->
+
+  <h1>Interactive Restaurant</h1>
+
+  <div class="menu">
+    <div>
+      <h3>Menu</h3>
+      <label><input type="checkbox" value="Burger"> Burger</label>
+      <label><input type="checkbox" value="Fries"> Fries</label>
+      <label><input type="checkbox" value="Drink"> Drink</label>
+      <label><input type="checkbox" value="Dessert"> Dessert</label>
+    </div>
+  </div>
+
+  <button onclick="startOrder()">Place Order</button>
+  <ul id="orderStatus"></ul>
+
   <script src="script.js"></script>
 </body>
 </html>
