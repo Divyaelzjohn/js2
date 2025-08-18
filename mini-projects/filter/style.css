@@ -1,0 +1,15 @@
+.filters {
+  width: 200px;
+  float: left;
+}
+.products {
+  margin-left: 220px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
