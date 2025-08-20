@@ -290,7 +290,64 @@ console.log(cart.add("T-Shirt")); // T-Shirt added
 console.log(cart.show()); // Shoes, T-Shirt*/
 
 
-// Javascript functions are defined with the function keyword. You can use a function declaration or a function expression.   
 
 
-// function myFunction(a,b){return a*b};
+
+// What is this javascript? -> this is a special keyword that refers to the object that is currently executing the function. It's value changes depending on how the function is called.
+/*//1. Case of this 1.In Global Scope
+console.log(this);
+// 2.Inside a function
+function show() {
+  console.log(this);
+}
+show();
+
+// 3.Inside an Object
+let user = {
+  name: "Divya",
+  greet: function() {
+    console.log("Hi, I am " + this.name);
+  }
+};
+user.greet(); // Hi, I am Divya*/
+
+// Arrow Function
+/*let user = {
+  name: "Divya",
+  greet: () => {
+    console.log("Hi, I am " + this.name);
+  }
+};
+user.greet(); // Hi, I am undefined*/
+
+// 5.Using this in constructor function
+/*function Person(name) {
+  this.name = name;
+}
+let p1 = new Person("Divya");
+console.log(p1.name); // Divya*/
+
+// Event Handlers
+// let btn=document.querySelector("button");btn.addEventListener("click",function(){console.log(this)})
+
+
+
+// Real-life Use Cases
+// 1.Object with Methods
+let car = {
+  brand: "Tesla",
+  start: function() {
+    console.log(this.brand + " started!");
+  }
+};
+car.start(); // Tesla started!
+
+// 2.Reusing Function with this
+function sayHello() {
+  console.log("Hello " + this.name);
+}
+let person1 = { name: "Divya", greet: sayHello };
+let person2 = { name: "Alex", greet: sayHello };
+person1.greet(); // Hello Divya
+person2.greet(); // Hello Alex
+
