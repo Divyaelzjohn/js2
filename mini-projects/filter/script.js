@@ -14,16 +14,12 @@ const products = [
 ];
 
 
-
-
-
 const productContainer = document.querySelector(".products");
 const genderFilters = document.querySelectorAll(".gender-filter");
 const categoryFilters = document.querySelectorAll(".category-filter");
 const priceRange = document.getElementById("priceRange");
 const priceValue = document.getElementById("priceValue");
 
-// Function to display products
 function displayProducts(filteredProducts) {
   productContainer.innerHTML = "";
   if (filteredProducts.length === 0) {

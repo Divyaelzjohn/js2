@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function</title>
+</head>
+<body>
+  <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Quiz Game</title>
+</head>
+<body>
+  <h2>Math Quiz Game</h2>
+  <div id="game"></div>
+
+  <script>
+    // 1. Function Declaration (always ready, reusable)
+    function greetPlayer(name) {
+      return `Welcome ${name}! Let's play Math Quiz `;
+    }
+
+    // 2. Function Expression (must be defined before use)
+    const checkAnswer = function(userAnswer, correctAnswer) {
+      return userAnswer === correctAnswer ? "Correct!" : " Wrong!";
+    };
+
+    // 3. Arrow Function (short, neat)
+    const getQuestion = () => {
+      let a = Math.floor(Math.random() * 10);
+      let b = Math.floor(Math.random() * 10);
+      let question = `${a} + ${b} = ?`;
+      let answer = a + b;
+      return { question, answer };
+    };
+
+    // ----- Game Start -----
+    let output = document.getElementById("game");
+
+    // greet player
+    let playerName = prompt("Enter your name:");
+    output.innerHTML += `<p>${greetPlayer(playerName)}</p>`;
+
+    // ask 3 questions
+    for (let i = 1; i <= 3; i++) {
+      let { question, answer } = getQuestion();
+      let userAns = parseInt(prompt(`Q${i}: ${question}`));
+      let result = checkAnswer(userAns, answer);
+
+      output.innerHTML += `<p>Q${i}: ${question} → ${result}</p>`;
+    }
+  </script>
+</body>
+</html>
+rfhg

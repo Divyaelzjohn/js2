@@ -43,4 +43,3 @@ function login(username,password){
   if(username!=="admin"||password!=="1234"){
   }
 }
-

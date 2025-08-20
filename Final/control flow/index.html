@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App with Break</title>
+</head>
+<body>
+  <h2>Simple Quiz</h2>
+  <div id="output"></div>
+   <script src="index.js"></script> 
+   <script>
+    let questions=[
+      { q: "2 + 2 = ?", a: "4" },
+      { q: "Capital of India?", a: "Delhi" },
+      { q: "5 * 3 = ?", a: "15" }
+    ]
+    let output=document.getElementById("output")
+    for(let i=0;i<questions.length;i++){
+      let userAns=prompt(questions[i].q)
+
+      if(userAns===questions[i].a){
+        output.innerHTML+=`<p>Correct:${questions[i].q}</p>`;
+      }else{
+        output.innerHTML+=`</p> Wrong Answer! Quiz Over.</p>`;
+      }
+    }
+   </script>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Shopping Cart</h2>
+  <div id="cart"></div>
+  <script>
+    let cart=["Shoes","","Shirt",null,"Jeans",""];
+    let cartDiv=document.getElementById("cart")
+    for(let item of cart){
+      if(!item)continue;
+      cartDiv.innerHTML+=`<p>${item}</p>`
+    }
+  </script>
+</body>
+</html>*/ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="index.js"></script>
+</body>
+</html>
