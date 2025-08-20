@@ -202,6 +202,13 @@ console.log("Cart:", cart); // ["Shoes", "T-Shirt"]*/
 
 
 // Closure->a closure happens when a function "remembers" variables from it's parent scope even after the parent function has finished running 
+/* A backpack where a function carries its parent's its parent's variable.Wherever the function  goes, it can always look into its backpack
+Why closure is useful?
+1.Data privacy->Keep variables safe(like private variables).
+2.Maintain state between function calls.
+3.Callbacks & async code -> closusre remember the data they need.
+4.Functional programming ->pass functions around with memmory.
+*/
 
 /*function outer() {
   let count = 0; // outer variable
@@ -215,3 +222,75 @@ let counter = outer(); // outer runs once
 console.log(counter()); // 1
 console.log(counter()); // 2
 console.log(counter()); // 3*/
+
+// Practical Use Cases
+/*
+1.Private Counter 
+function createCounter() {
+  let count = 0; // private
+  return {
+    increment: function() {
+      count++;
+      return count;
+    },
+    decrement: function() {
+      count--;
+      return count;
+    },
+    getCount: function() {
+      return count;
+    }
+  };
+}
+let counter = createCounter();
+console.log(counter.increment()); // 1
+console.log(counter.increment()); // 2
+console.log(counter.getCount());  // 2
+console.log(counter.decrement()); // 1
+*/
+
+//2. Custom Greeting
+/*function greetUser(greeting) {
+  return function(name) {
+    return `${greeting}, ${name}!`;
+  };
+}
+let sayHello = greetUser("Hello");
+console.log(sayHello("Divya")); // Hello, Divya!
+console.log(sayHello("Alex"));  // Hello, Alex!
+let sayHi = greetUser("Hi");
+console.log(sayHi("John"));     // Hi, John!*/
+
+// 3.Delayed Execution 
+/*function reminder(task) {
+  return function() {
+    console.log("Don't forget to " + task);
+  };
+}
+let drinkWater = reminder("drink water");
+setTimeout(drinkWater, 2000); // After 2s → Don't forget to drink water*/
+
+
+// Shopping Cart with Closure
+/*function createCart() {
+  let items = []; // private
+  return {
+    add: function(item) {
+      items.push(item);
+      return `${item} added`;
+    },
+    show: function() {
+      return items.length ? items.join(", ") : "Cart is empty";
+    }
+  };
+}
+let cart = createCart();
+console.log(cart.add("Shoes")); // Shoes added
+console.log(cart.add("T-Shirt")); // T-Shirt added
+console.log(cart.show()); // Shoes, T-Shirt*/
+
+
+// Javascript functions are defined with the function keyword. You can use a function declaration or a function expression.   
+
+
+// function myFunction(a,b){return a*b};
