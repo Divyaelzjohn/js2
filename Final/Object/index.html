@@ -4,8 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <!-- <h2>Banking App</h2>
+  <p>Account Holder: <b id="owner">Alex</b></p>
+  <p>Balance:<span id="balance">1000</span></p>
+  <input type="number" id="amount" placeholder="Enter amount">
+  <br>
+  <button onclick="account.deposit()">Deposite</button>
+  <button onclick="account.withdraw()">Withdraw</button>
+
+  <div id="output"></div>
+
+  <script>
+    const account = {
+      owner: "Divya",
+      balance: 1000,
+      deposit() {
+        let amount = Number(document.getElementById("amount").value);
+        if (amount > 0) {
+          this.balance += amount;
+          this.updateUI(`Deposited ₹${amount}`);
+        } else {
+          this.updateUI("Enter valid amount");
+        }
+      },
+      withdraw() {
+        let amount = Number(document.getElementById("amount").value);
+        if (amount <= 0) {
+          this.updateUI("Enter valid amount");
+        } else if (amount > this.balance) {
+          this.updateUI("Insufficient Balance");
+        } else {
+          this.balance -= amount;
+          this.updateUI(`Withdrew ₹${amount}`);
+        }
+      },
+      updateUI(message) {
+        document.getElementById("balance").textContent = this.balance;
+        document.getElementById("output").textContent = message;
+      }
+    };
+  </script>
+   -->
+
+<!-- 
+   <h2>Shopping Cart</h2>
+   <div class="products">
+    <h3>Products</h3>
+    <button onclick="cart.addItem('Laptop',50000)">Add Laptop(50,000)</button>
+    <button onclick="cart.addItem('Phone',20000)">Add Phone(20,000)</button>
+    <button onclick="cart.addItem('Headphones',2000)">Add Headphone</button>
+   </div>
+   <div id="cart">
+    <h3>Cart Items</h3>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: 0</p>
+   </div>
+   <script>
+     const cart = {
+      items: [],
+      total: 0,
+      addItem(name, price) {
+        this.items.push({ name, price });
+        this.total += price;
+        this.updateUI();
+      },
+      updateUI() {
+        const list = document.getElementById("cart-items");
+        list.innerHTML = ""; // clear old list
+        this.items.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - ₹${item.price}`;
+          list.appendChild(li);
+        });
+        document.getElementById("total").textContent = "Total: ₹" + this.total;
+      }
+    };
+    </script> -->
+
+    <!-- <h2>Player Game</h2>
+
+    <div id="game">
+      <p>Player: <span id="player-name"></span></p>
+      <p>Health: <span id="player-health"></span></p>
+      <button onclick="player.move('left')">⬅ Move Left</button>
+      <button onclick="player.move('right')">➡ Move Right</button>
+      <button onclick="player.attack()">⚔ Attack</button>
+    </div>
+  
+    <p id="log">Game Started...</p>
+
+    <script>
+      const player = {
+      name: "Warrior",
+      health: 100,
+      move(direction) {
+        document.getElementById("log").textContent =
+          `${this.name} moved ${direction}!`;
+        this.updateUI();
+      },
+      attack() {
+        const damage = Math.floor(Math.random() * 20) + 1; // random 1–20
+        this.health -= damage;
+        if (this.health <= 0) {
+          document.getElementById("log").textContent =
+            `${this.name} attacked and fainted (Game Over)`;
+          this.health = 0;
+        } else {
+          document.getElementById("log").textContent =
+            `${this.name} attacked! Lost ${damage} health.`;
+        }
+        this.updateUI();
+      },
+      updateUI() {
+        document.getElementById("player-name").textContent = this.name;
+        document.getElementById("player-health").textContent = this.health;
+      }
+    };
+
+    // initialize UI
+    player.updateUI(); -->
+
+  
+  </script>
 </body>
 </html>

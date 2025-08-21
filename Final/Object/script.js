@@ -112,6 +112,28 @@ cart.addItem(product1, 1);  // 1 x Laptop added to cart
 cart.addItem(product2, 2);  // 2 x Headphones added to cart
 console.log("Total Cart Value: ₹" + cart.getTotal());*/
 
+/*const player={
+  name:"Hero",
+  health:100,
+  position:{x:0, y:0},
+
+  move(direction){
+    if(direction==="up")this.position.y++;
+    if(direction==="down")this.position.y--;
+    if(direction==="left")this.position.x--;
+    if(direction==="right")this.position.x++;
+    console.log(`${this.name} moved ${direction}->Position:`,this.position)
+  },
+  attck(enemy){
+    console.log(`${this.name} attacks ${enemy.name}!`);
+    enemy.health-=10;
+    console.log(`${enemy.name}'s health:${enemy.health}`)
+  }
+};
+const enemy={name:"Dragon",health:50};
+player.move("up");
+player.move("right");
+player.move(enemy);*/
 
 
 // Game Character(player.move/player.attack)
@@ -371,3 +393,59 @@ const knight = new Warrior("Knight", 100, "Sword");
 const dragon = new Character("Dragon", 200);
 knight.attack(dragon);        // Knight attacked Dragon. Dragon health: 190
 knight.specialAttack(dragon); // Knight used Sword special attack! Dragon health: 160*/
+
+
+// What is this? -> imagine you are pointed to yourself and saying
+
+/*const account = {
+  owner: "Divya",
+  balance: 1000,
+  deposit(amount) {
+    this.balance += amount; // 'this' means account
+    console.log(`${this.owner} deposited ${amount}. Balance: ${this.balance}`);
+  },
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      console.log(`${this.owner} withdrew ${amount}. Balance: ${this.balance}`);
+    } else {
+      console.log("Insufficient balance!");
+    }
+  }
+};
+
+account.deposit(500);   // 'this' = account
+account.withdraw(200);
+
+const cart={
+  items:[],
+  addItem(item,price){
+    this.items.push({item, price});
+    console.log(`${item} added!`)
+  },
+  getTotal(){
+    let total=0;
+    this.items.forEach(products=>total+=products.price);
+    console.log(`Total: ${total}`)
+  }
+}
+cart.addItem("Book",200);
+cart.addItem("Pen",50);
+cart.getTotal();
+
+
+const player = {
+  name: "Warrior",
+  health: 100,
+  attack() {
+    console.log(`${this.name} attacked!`); // 'this' = player
+  },
+  heal(points) {
+    this.health += points;
+    console.log(`${this.name} healed ${points}. Health: ${this.health}`);
+  }
+};
+
+player.attack();
+player.heal(20);
+*/
