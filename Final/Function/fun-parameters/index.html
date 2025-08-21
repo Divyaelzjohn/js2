@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Shopping Bill with Default Delivery</title>
 </head>
 <body>
+
   <!-- <script src="script.js"></script> -->
+  <!--  Mini Project Example – Simple Shopping Bill
+  <h2>Shopping Bill Calculator</h2>
+  <input type="number" id="price" placeholder="Enter price">
+  <input type="number" id="qty" placeholder="Enter quantity">
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+  <script>
+     function calculateBill(price, quantity) {
+      return price * quantity;
+    }
+    function calculate() {
+      let price = document.getElementById("price").value;
+      let qty = document.getElementById("qty").value;
+      let total = calculateBill(price, qty); // arguments passed
+      document.getElementById("result").innerText = "Total Bill = ₹" + total;
+    }
+  </script> -->
+  <!-- Mini Project Example – Shopping + Tax 
+  <h2>Shopping Tax Calculator</h2>
+  <input id="price" type="number" placeholder="Enter price">
+  <button onclick="calculate()">Calculate with Tax</button>
+  <p id="result"></p>
+
+  <script>
+      function calculateTax(price) {
+      let taxRate = 0.18;  // 18% GST
+      let total = price + (price * taxRate);
+      return total;  // returning value
+    }
+    function calculate() {
+      let price = parseFloat(document.getElementById("price").value);
+      let finalBill = calculateTax(price); // store return value
+      document.getElementById("result").innerText = "Final Bill (with tax) = ₹" + finalBill.toFixed(2);
+    }
+  </script>  -->
+   
+  <!-- Mini Project Example – Shopping with Default Delivery Fee
+  <h2>Shopping Bill Calculator</h2>
+  <input id="price" type="number" placeholder="Enter product price">
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    // function with default parameter
+    function calculateBill(price, delivery = 50) {
+      return price + delivery;
+    }
+
+    function calculate() {
+      let price = parseFloat(document.getElementById("price").value);
+
+      // without giving delivery charge → default ₹50
+      let bill1 = calculateBill(price);
+      
+      // if user enters "free delivery"
+      let bill2 = calculateBill(price, 0);
+
+      document.getElementById("result").innerHTML = 
+        "Bill with default delivery (₹50): ₹" + bill1 + "<br>" +
+        "Bill with free delivery: ₹" + bill2;
+    } 
+    </script>-->
+    <!--⚡ Mini Project Example – Restaurant Bill Calculator
+     <h2>Resturant Bill Calculator</h2>
+    <button onclick="calculateBill()">Show Bill</button>
+    <p id="result"></p>
+    <script>
+      function totalBill(...items){
+        let sum=0;
+        for(let price of items){
+          sum+=price;
+        }
+        return sum;
+      }
+      function calculateBill(){
+        let bill=totalBill(100,250,150);
+        document.getElementById("result").innerText="Total Bill="+bill
+      }
+    </script> -->
+    <!-- ⚡ Mini Project Example – Login Attempt Counter
+    <h2>Login Page</h2>
+    <button onclick="tryLogin()">Login Attempt</button>
+    <p id="status"></p>
+    <script>
+      function loginCounter() {
+        let attempts = 0; // private variable
+  
+        return function() {
+          attempts++;
+          return attempts;
+        };
+      }
+      // closure keeps attempts safe
+      let countLogin = loginCounter();
+  
+      function tryLogin() {
+        let num = countLogin(); // call closure
+        document.getElementById("status").innerText =
+          "Login Attempt #" + num;
+      }
+    </script> -->
+    
+  
 </body>
 </html>

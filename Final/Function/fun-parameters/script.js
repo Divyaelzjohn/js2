@@ -1,9 +1,22 @@
-/* Function Parameters & Arguments*/
+/* Function Parameters & Arguments
+Parameters=placehlder in a function definition
+Arguments=actual values you pass when calling the function.
+*/
 /*function greet(name) {   // name = parameter (empty box)
   console.log("Hello " + name);
 }
 greet("Divya"); // "Divya" = argument (value we pass)
 greet("Alex");*/
+
+
+// use case ->In a calculator app,add(num1,num2)->Parameters num1,num2,   When user enters 5, 10 -> thses are arguments
+
+/*function calculateBill(price, quantity) {  // parameters
+  let total = price * quantity;
+  console.log("Total Bill: $" + total);
+}
+calculateBill(100, 2); // arguments: 100, 2
+calculateBill(50, 5);  // arguments: 50, 5*/
 
 
 // Multiple Parameter
@@ -20,6 +33,10 @@ add(10, 20); // 30*/
 }
 greetUser("Divya"); // Welcome, Divya
 greetUser();        // Welcome, Guest*/
+/*
+Suppose a shop charges ₹50 delivery fee by default.
+But sometimes, they give free delivery (delivery = 0).
+Default parameter makes this easier. */
 
 
 // Rest Parameters(...) -> sometimes don't know how many arguments will come-> use ...(rest operator).
@@ -64,9 +81,15 @@ console.log(calculator(10, 5));      // 15 (default +)*/
   }
   return total / scores.length;
 }
-console.log(average(80, 90, 70)); // 80
+console.log(average(80, 90, 70)); // 80 m
 console.log(average(50, 60, 100, 90)); // 75*/
 
+
+
+// Return values -function can send back a value after it finishes.That value can be stored in a vzriable or used somewhere else.
+/* Real Project Use case-Tax Calculator
+-imagine you buy something worth 1000,Shop need to calculate total=price + tax, function calculateTax(price)-returns the final bill width taxs.
+ */
 
 // Return statement - A function can either: just do something(like print to console) or give back a value using return. return sends a value back to the place where the function was called
 /*function add(a, b) {
@@ -334,7 +357,7 @@ console.log(p1.name); // Divya*/
 
 // Real-life Use Cases
 // 1.Object with Methods
-let car = {
+/*let car = {
   brand: "Tesla",
   start: function() {
     console.log(this.brand + " started!");
@@ -349,5 +372,5 @@ function sayHello() {
 let person1 = { name: "Divya", greet: sayHello };
 let person2 = { name: "Alex", greet: sayHello };
 person1.greet(); // Hello Divya
-person2.greet(); // Hello Alex
+person2.greet(); // Hello Alex*/
 
