@@ -447,5 +447,265 @@ const player = {
 };
 
 player.attack();
-player.heal(20);
+player.heal(20);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+//What is an object in js?->An object is a collection of key-vakue pairs.keys->always string(or symbols), values->can be anything(number,string,array, function,another object, etc.)
+// Object Literals->created using {}
+// Accesing Object Properties  1.Dot notation(console.log(car.brand)) ,Bracket Notation(console.log(car["model"]);let key="year";console.log(car[key]))
+// Adding ,updating, Deleting
+/*car.color="Red";    //->Add
+car.year=2024;      //->Update
+delete car.model;   //->Delete*/
+
+//Methods in Objects->Function inside objects are called methods
+/*const person={
+  name:"Alex",
+  greet:function(){
+    console.log("Hello, my name is "+this.name)
+  }
+};
+person.greet();*/
+
+/* this keyword- 
+  Inside an object method-> this refers to the object., 
+  But in a normal function-> this can be undefined or window(in browser).
 */
+/*const student={
+  name:"Alex",
+  showThis:function(){
+    console.log(this.name)
+  }
+}
+student.showThis();*/
+
+
+// Object Iteration -> Looping through object keys.
+/*const product={id:101,name:"Laptop",price:50000}
+for(let key in product){console.log(key, product[key])}
+console.log(Object.keys(product));   // ["id", "name", "price"]
+console.log(Object.values(product)); // [101, "Laptop", 50000]
+console.log(Object.entries(product)); // [["id",101],["name","Laptop"],["price",50000]]*/
+
+
+// Prototypes and Inheritance->Every object in JS has a hidden property called _proto_. It alllows inheritance ->an object can inherit properties/methods from another.
+/*const animal = {
+  eats: true
+};
+const dog = {
+  barks: true
+};
+dog.__proto__ = animal; // Inheritance
+console.log(dog.eats);  // true*/
+
+// ES6 classes(syntactic sugar for prototypes) -> Instead of using _proto_ , we use classes for style coding.
+
+/*class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(this.name + " makes a sound");
+  }
+}
+class Dog extends Animal {
+  speak() {
+    console.log(this.name + " barks");
+  }
+}
+const d = new Dog("Tommy");
+d.speak(); // Tommy barks*/
+
+
+// class Animal{constructor(name){this.name=name} speak(){console.log(this.name+" makes a sound")}}class Dog extends Animal{speak(){console.log(this.name+" barks")}}const d=new Dog("Tommy");d.speak();
+
+
+
+// Objects in Projects(Use cases)
+// Store products Data(e-Commerce Cart)
+/*const cartItem = {
+  id: 1,
+  name: "Phone",
+  price: 15000,
+  quantity: 2,
+  total: function() {
+    return this.price * this.quantity;
+  }
+};
+console.log(cartItem.total()); // 30000*/
+
+// User Profile System
+/* const user = {
+  username: "divya123",
+  email: "divya@example.com",
+  login() {
+    console.log(this.username + " logged in");
+  },
+  logout() {
+    console.log(this.username + " logged out");
+  }
+};
+user.login();  // divya123 logged in
+user.logout(); // divya123 logged out*/
+
+// class-based OOP(Booking System)
+/*class Booking {
+  constructor(user, packageName) {
+    this.user = user;
+    this.packageName = packageName;
+  }
+  confirmBooking() {
+    console.log(`Booking confirmed for ${this.user} on ${this.packageName}`);
+  }
+}
+const booking1 = new Booking("Divya", "Goa Trip");
+booking1.confirmBooking(); // Booking confirmed for Divya on Goa Trip*/
+
+
+// Mini Project Shopping Cart
+/*class Product {
+  constructor(id, name, price) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+
+// create a cartItem Class
+class CartItem {
+  constructor(product, quantity) {
+    this.product = product;
+    this.quantity = quantity;
+  }
+  getTotalPrice() {
+    return this.product.price * this.quantity;
+  }
+}
+
+// Create a cart class
+class Cart {
+  constructor() {
+    this.items = [];
+  }
+  addItem(product, quantity) {
+    const item = new CartItem(product, quantity);
+    this.items.push(item);
+  }
+  removeItem(productId) {
+    this.items = this.items.filter(item => item.product.id !== productId);
+  }
+  getTotalCartValue() {
+    return this.items.reduce((total, item) => total + item.getTotalPrice(), 0);
+  }
+  showCart() {
+    console.log("Your Cart:");
+    this.items.forEach(item => {
+      console.log(`${item.product.name} x${item.quantity} = ₹${item.getTotalPrice()}`);
+    });
+    console.log("Total: ₹" + this.getTotalCartValue());
+  }
+}
+
+// Use the Cart -> now let's test it
+// Products
+const phone = new Product(1, "Smartphone", 15000);
+const laptop = new Product(2, "Laptop", 50000);
+const headphones = new Product(3, "Headphones", 2000);
+// Cart
+const cart = new Cart();
+cart.addItem(phone, 2);       // 2 phones
+cart.addItem(laptop, 1);      // 1 laptop
+cart.addItem(headphones, 3);  // 3 headphones
+cart.showCart();  
+cart.removeItem(1); // remove phone
+cart.showCart();*/
+
+
+
+// Product class
+/*class Product {
+  constructor(id, name, price) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+// CartItem class
+class CartItem {
+  constructor(product, quantity) {
+    this.product = product;
+    this.quantity = quantity;
+  }
+  getTotalPrice() {
+    return this.product.price * this.quantity;
+  }
+}
+// Cart class
+class Cart {
+  constructor() {
+    this.items = [];
+  }
+  addItem(product, quantity) {
+
+    let existing = this.items.find(item => item.product.id === product.id);
+    if (existing) {
+      existing.quantity += quantity;
+    } else {
+      this.items.push(new CartItem(product, quantity));
+    }
+    this.render();
+  }
+  removeItem(productId) {
+    this.items = this.items.filter(item => item.product.id !== productId);
+    this.render();
+  }
+  getTotalCartValue() {
+    return this.items.reduce((total, item) => total + item.getTotalPrice(), 0);
+  }
+  render() {
+    const cartItemsDiv = document.getElementById("cart-items");
+    cartItemsDiv.innerHTML = "";
+    this.items.forEach(item => {
+      let div = document.createElement("div");
+      div.className = "cart-item";
+      div.innerHTML = `
+        ${item.product.name} x${item.quantity} = ₹${item.getTotalPrice()}
+        <button onclick="cart.removeItem(${item.product.id})">Remove</button>
+      `;
+      cartItemsDiv.appendChild(div);
+    });
+    document.getElementById("total").textContent = this.getTotalCartValue();
+  }
+}
+// Products
+const products = [
+  new Product(1, "Smartphone", 15000),
+  new Product(2, "Laptop", 50000),
+  new Product(3, "Headphones", 2000)
+];
+
+const cart = new Cart();
+
+// Render products
+const productsDiv = document.getElementById("products");
+products.forEach(p => {
+  let div = document.createElement("div");
+  div.className = "product";
+  div.innerHTML = `
+    <h3>${p.name}</h3>
+    <p>Price: ₹${p.price}</p>
+    <button onclick="cart.addItem(products[${p.id - 1}], 1)">Add to Cart</button>
+  `;
+  productsDiv.appendChild(div);
+});*/
