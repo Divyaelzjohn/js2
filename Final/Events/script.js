@@ -107,3 +107,70 @@ c]Form Events
   Keep event handler short-> delegate logic to functions
 
 */
+
+ /* let btn = document.getElementById("btn");
+  // click event
+  btn.addEventListener("click", () => {
+      console.log("Button clicked!");
+  });
+  // double click
+  btn.addEventListener("dblclick", () => {
+      console.log("Button double clicked!");
+  });
+  // mouse over
+  btn.addEventListener("mouseover", () => {
+      btn.style.backgroundColor = "red";
+  });
+  // mouse out
+  btn.addEventListener("mouseout", () => {
+      btn.style.backgroundColor = "";
+  });*/
+
+/*
+  let btn = document.getElementById("btn");
+// 1. Click event
+  btn.addEventListener("click", () => {
+    alert("Button clicked!");
+  });
+// 2. Double click event
+  btn.addEventListener("dblclick", () => {
+    console.log("Button double clicked!");
+  });
+// 3. Mouse over event
+  btn.addEventListener("mouseover", () => {
+    btn.style.backgroundColor = "yellow";
+  });
+// 4. Mouse out event
+  btn.addEventListener("mouseout", () => {
+    btn.style.backgroundColor = "lightblue";
+  });
+// 5. Bonus: mousedown & mouseup
+  btn.addEventListener("mousedown", () => {
+    btn.textContent = "Holding...";
+  });
+  btn.addEventListener("mouseup", () => {
+    btn.textContent = "Hover or Click Me";
+  });*/
+
+
+/*const hello = document.getElementById("helloBtn");
+hello.addEventListener("click", () => {
+  alert("Hello, User!");
+});
+
+const color = document.getElementById("colorBtn");
+color.addEventListener("click", () => {
+  document.body.style.backgroundColor = "lightblue";
+});
+
+const count = document.getElementById("countBtn");
+let counter = 0; // step 1: create counter variable
+count.addEventListener("click", () => {
+  counter++; // step 2: increase count
+  console.log("Button clicked", counter, "times"); // step 3: print count
+});*/
+
+/*const btn=document.getElementById("dblclick");
+btn.addEventListener("dblclick",()=>{
+  console.log("You double clicked!")
+})*/
